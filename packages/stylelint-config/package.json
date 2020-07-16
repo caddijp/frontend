@@ -1,0 +1,12 @@
+{
+  "name": "@caddijp/stylelint-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "stylelint example/*.{scss,tsx} --config index.js"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^8.0.2"
+  }
+}
