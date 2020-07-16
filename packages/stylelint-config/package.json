@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "stylelint-config-prettier": "^8.0.2"
+  },
+  "peerDependencies": {
+    "stylelint": ">=11.0.0"
   }
 }
