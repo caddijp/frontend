@@ -1,4 +1,14 @@
 {
+  "changelog": {
+    "cacheDir": ".changelog",
+    "labels": {
+      "Type: Breaking Change": ":boom: Type: Breaking Change",
+      "Type: Bug": ":bug: Type: Bug",
+      "Type: Documentation ": ":memo: Documentation",
+      "Type: Feature": ":rocket: Type: Feature"
+    }
+  },
+  "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.md"],
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
