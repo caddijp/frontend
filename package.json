@@ -11,6 +11,7 @@
     "lint:es": "eslint . --ext=ts,tsx",
     "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
     "lint:style": "stylelint '**/*.ts{,x}'",
+    "prepublishOnly": "yarn lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
     "test": "yarn lint"
   },
