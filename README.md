@@ -1,6 +1,6 @@
-# @caddijp/styleguide
+# @caddijp/frontend
 
-![Actions Status](https://github.com/caddijp/styleguide/workflows/Node%20CI/badge.svg)
+![Actions Status](https://github.com/caddijp/frontend/workflows/Node%20CI/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Install

@@ -1,7 +1,7 @@
 {
-  "name": "@caddijp/styleguide",
+  "name": "@caddijp/frontend",
   "private": true,
-  "repository": "ssh://git@github.com/caddijp/styleguide.git",
+  "repository": "ssh://git@github.com/caddijp/frontend.git",
   "author": "Caddi Co.,Ltd",
   "license": "MIT",
   "devDependencies": {
