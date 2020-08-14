@@ -1,5 +1,9 @@
 {
   "processors": ["stylelint-processor-styled-components"],
-  "extends": ["@caddijp/stylelint-config", "stylelint-config-styled-components"],
+  "extends": [
+    "@caddijp/stylelint-config",
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
   "syntax": "scss"
 }
