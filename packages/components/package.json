@@ -1,0 +1,29 @@
+{
+  "name": "@caddijp/components",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:lib": "tsc -p tsconfig.build.json",
+    "build:esm": "tsc -p tsconfig.esm.build.json",
+    "clean": "rimraf ./lib",
+    "prepublishOnly": "run-s clean lint build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "CADDi ui components built with React.",
+  "repository": "git+https://github.com/caddijp/caddi-components.git",
+  "devDependencies": {
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  }
+}

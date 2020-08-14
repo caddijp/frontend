@@ -1,3 +1,17 @@
 {
-  "extends": "@caddijp/eslint-config"
+  "extends": ["@caddijp/eslint-config", "prettier/react"],
+  "plugins": ["react", "react-hooks"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true
+  }
 }
