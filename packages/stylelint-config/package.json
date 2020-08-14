@@ -7,7 +7,8 @@
     "test": "stylelint example/*.{scss,tsx} --config index.js"
   },
   "dependencies": {
-    "stylelint-config-prettier": "^8.0.2"
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0"
   },
   "peerDependencies": {
     "stylelint": ">=11.0.0"
