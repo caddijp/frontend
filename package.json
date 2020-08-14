@@ -16,20 +16,16 @@
     "stylelint": "^13.6.1",
     "typescript": "^3.9.6"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "scripts": {
     "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
     "test": "run-p -l lint:*",
     "lint:es": "eslint .",
     "lint:style": "stylelint '**/*.scss'",
-    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://npm.pkg.github.com/\"'"
+    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://npm.pkg.github.com/\"'",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "**/*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
     ],
