@@ -7,4 +7,4 @@ module.exports = {
   ],
   syntax: 'scss',
   rules: {},
-}
+};
