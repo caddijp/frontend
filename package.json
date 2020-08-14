@@ -1,9 +1,19 @@
 {
   "name": "@caddijp/frontend",
   "private": true,
+  "license": "MIT",
   "repository": "ssh://git@github.com/caddijp/frontend.git",
   "author": "Caddi Co.,Ltd",
-  "license": "MIT",
+  "scripts": {
+    "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint": "run-p -l lint:*",
+    "lint:es": "eslint . --ext=ts,tsx",
+    "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
+    "lint:style": "stylelint '**/*.ts{,x}'",
+    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://npm.pkg.github.com/\"'",
+    "test": "yarn lint"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
@@ -17,18 +27,12 @@
     "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
+    "prettier-plugin-organize-imports": "^1.1.1",
+    "prettier-plugin-package": "^1.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.9.6"
-  },
-  "scripts": {
-    "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
-    "test": "run-p -l lint:*",
-    "lint:es": "eslint .",
-    "lint:style": "stylelint '**/*.ts{,x}'",
-    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://npm.pkg.github.com/\"'",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

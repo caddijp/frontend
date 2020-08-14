@@ -1,16 +1,16 @@
 {
   "name": "@caddijp/stylelint-config",
   "version": "0.0.1",
-  "main": "index.js",
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "test": "stylelint example/*.{scss,tsx} --config index.js"
+  },
+  "peerDependencies": {
+    "stylelint": ">=11.0.0"
   },
   "dependencies": {
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0"
-  },
-  "peerDependencies": {
-    "stylelint": ">=11.0.0"
   }
 }
