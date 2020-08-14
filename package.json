@@ -33,7 +33,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
+    "*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
     ],
