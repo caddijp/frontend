@@ -1,3 +1,18 @@
+## v0.0.4 (2020-08-15)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#15](https://github.com/caddijp/frontend/pull/15) feat(components): caution component ([@sottar](https://github.com/sottar))
+  - [#14](https://github.com/caddijp/frontend/pull/14) Feature form component ([@sottar](https://github.com/sottar))
+  - [#13](https://github.com/caddijp/frontend/pull/13) feat(components): button component ([@sottar](https://github.com/sottar))
+  - [#12](https://github.com/caddijp/frontend/pull/12) feat(components): card component ([@sottar](https://github.com/sottar))
+  - [#11](https://github.com/caddijp/frontend/pull/11) feat(components): upload component ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.3 (2020-08-14)
 
 #### :bug: Type: Bug

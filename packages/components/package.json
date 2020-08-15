@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CADDi ui components built with React.",
   "repository": "git+https://github.com/caddijp/caddi-components.git",
   "main": "lib/index.js",
