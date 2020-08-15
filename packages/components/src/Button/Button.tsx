@@ -45,6 +45,7 @@ const PrimaryButton = styled(BaseButton)`
   background: #1890ff;
   border: 1px solid #1890ff;
 `;
+
 const DefaultButton = styled(BaseButton)`
   color: #1890ff;
   border: 1px solid #1890ff;

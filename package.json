@@ -5,13 +5,14 @@
   "repository": "ssh://git@github.com/caddijp/frontend.git",
   "author": "Caddi Co.,Ltd",
   "scripts": {
+    "build": "lerna run build --include-dependencies",
     "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "run-p -l lint:*",
     "lint:es": "eslint . --ext=ts,tsx",
+    "lint:pkg": "lerna run lint --parallel",
     "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
     "lint:style": "stylelint '**/*.ts{,x}'",
-    "lint:pkg": "lerna run lint --parallel",
     "prepublishOnly": "yarn lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
     "test": "lerna run test --parallel"
@@ -36,7 +37,6 @@
     "stylelint": "^13.6.1",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
-    "ts-jest": "^26.2.0",
     "typescript": "^3.9.6"
   },
   "lint-staged": {
@@ -45,7 +45,7 @@
       "eslint --fix"
     ],
     "*.ts": [
-      "stylelint --fix"
+      "stylelint"
     ],
     "*.{js,jsx,json,yml,md}": [
       "prettier --write"

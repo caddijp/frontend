@@ -1,3 +1,5 @@
+lib/
+esm/
 .changelog/
 
 ### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Node.gitignore
@@ -128,7 +130,8 @@ dist
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -148,5 +151,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
