@@ -12,7 +12,7 @@
     "lint:es": "eslint . --ext=ts,tsx",
     "lint:pkg": "lerna run lint --parallel",
     "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
-    "lint:style": "stylelint '**/*.ts{,x}'",
+    "lint:style": "stylelint '**/*.ts{,x}' -s css-in-js",
     "prepublishOnly": "yarn lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
     "test": "lerna run test --parallel"
@@ -36,7 +36,6 @@
     "prettier-plugin-package": "^1.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.9.6"
   },
   "lint-staged": {
@@ -44,8 +43,8 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "*.ts": [
-      "stylelint"
+    "*.tsx": [
+      "stylelint -s css-in-js --fix"
     ],
     "*.{js,jsx,json,yml,md}": [
       "prettier --write"

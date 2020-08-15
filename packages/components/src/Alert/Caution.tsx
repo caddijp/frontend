@@ -7,8 +7,8 @@ type CautionProps = {
 
 const StyledCaution = styled.p`
   margin: 0 auto;
-  color: #8a8a8a;
   font-size: 11px;
+  color: #8a8a8a;
 `;
 
 const Caution: React.FC<CautionProps> = ({ children, className }) => {

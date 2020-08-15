@@ -1,4 +1,4 @@
-import { LoadingOutlined } from '@ant-design/icons';
+import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -15,11 +15,11 @@ type ButtonProps = {
 const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   padding: 5px 16px;
   text-align: center;
+  cursor: pointer;
   background: #fff;
   border: 0;
   border-radius: 2px;
   opacity: ${(props) => (props.disabled || props.isLoading ? '.5' : '1')};
-  cursor: pointer;
   transition: opacity 0.3s;
   &:hover {
     opacity: 0.5;

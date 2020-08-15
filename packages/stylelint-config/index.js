@@ -4,5 +4,7 @@ module.exports = {
     'stylelint-config-prettier',
     'stylelint-config-recess-order',
   ],
-  rules: {},
+  rules: {
+    'value-keyword-case': null,
+  },
 };
