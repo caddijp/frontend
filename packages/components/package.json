@@ -2,11 +2,12 @@
   "name": "@caddijp/components",
   "version": "0.0.4",
   "description": "CADDi ui components built with React.",
+  "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
-    "build": "run-p build:*",
+    "build": "run-s clean build:*",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "build:lib": "tsc -p tsconfig.build.json",
     "clean": "rimraf lib esm",

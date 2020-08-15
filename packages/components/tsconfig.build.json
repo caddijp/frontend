@@ -1,5 +1,9 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "noEmit": false
+  },
   "exclude": [
     "node_modules",
     "src/**/*.test.ts",
