@@ -2,7 +2,7 @@
   "name": "@caddijp/components",
   "version": "0.0.4",
   "description": "CADDi ui components built with React.",
-  "repository": "git+https://github.com/caddijp/caddi-components.git",
+  "repository": "git@github.com:caddijp/frontend.git",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "build:lib": "tsc -p tsconfig.build.json",
     "clean": "rimraf ./lib",
     "prepublishOnly": "run-s clean build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^16.13.1",
@@ -26,9 +26,16 @@
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.2",
-    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(scss|css|less|svg)$": "identity-obj-proxy"
+    }
   }
 }
