@@ -18,6 +18,10 @@
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
   },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "antd": "^4.5.4"
+  },
   "devDependencies": {
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
