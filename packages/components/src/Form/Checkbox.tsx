@@ -22,30 +22,30 @@ const StyledCheckbox = styled.input`
   position: relative;
   width: 16px;
   height: 16px;
-  appearance: none;
   cursor: pointer;
-  background-color: #fff;
-  border-radius: 2px;
   border-collapse: separate;
+  background-color: #fff;
   border: 1px solid #d9d9d9;
+  border-radius: 2px;
   transition: all 0.3s;
+  appearance: none;
   &:checked {
     background-color: #1890ff;
     border-color: #1890ff;
     &::after {
       position: absolute;
-      display: table;
       top: 50%;
       left: 22%;
+      display: table;
       width: 5.71428571px;
       height: 9.14285714px;
+      content: ' ';
       border: 2px solid #fff;
       border-top: 0;
       border-left: 0;
-      transform: rotate(45deg) scale(1) translate(-50%, -50%);
       opacity: 1;
       transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-      content: ' ';
+      transform: rotate(45deg) scale(1) translate(-50%, -50%);
     }
   }
   &:focus {

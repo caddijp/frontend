@@ -15,22 +15,22 @@ interface Props {
 const Wrapper = styled.div`
   display: flex;
   > div {
-    background: #fafafa;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    height: 32px;
     padding: 5px 12px;
     font-size: 14px;
     text-align: center;
-    height: 32px;
+    background: #fafafa;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
     &.before {
       border-left: 1px solid #d9d9d9;
-      border-bottom-left-radius: 2px;
       border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
     }
     &.after {
       border-right: 1px solid #d9d9d9;
-      border-bottom-right-radius: 2px;
       border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
   }
 `;
@@ -40,14 +40,14 @@ const StyledInput = styled.input<{
   hasAddonBefore: boolean;
   hasAddonAfter: boolean;
 }>`
+  width: ${(props) => props.width ?? '100%'};
+  height: 32px;
+  background: #fff;
   border: 1px solid #d9d9d9;
-  border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
-  border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
   border-top-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   border-top-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
-  background: #fff;
-  height: 32px;
-  width: ${(props) => props.width ?? '100%'};
+  border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
+  border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   &:disabled {
     background: #fafafa;
   }

@@ -2,16 +2,18 @@
   "name": "@caddijp/components",
   "version": "0.0.4",
   "description": "CADDi ui components built with React.",
-  "repository": "git+https://github.com/caddijp/caddi-components.git",
+  "license": "MIT",
+  "repository": "git@github.com:caddijp/frontend.git",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
-    "build": "run-p build:*",
+    "build": "run-s clean build:*",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "build:lib": "tsc -p tsconfig.build.json",
-    "clean": "rimraf ./lib",
-    "prepublishOnly": "run-s clean build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf lib esm",
+    "prepublishOnly": "yarn build",
+    "start-storybook": "start-storybook -c .storybook",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^16.13.1",
@@ -23,12 +25,32 @@
     "antd": "^4.5.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@storybook/addon-storyshots": "^6.0.9",
+    "@storybook/react": "^6.0.9",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.2",
-    "npm-run-all": "^4.1.5",
+    "babel-plugin-macros": "^2.8.0",
+    "jest-styled-components": "^7.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "require-context.macro": "^1.2.2",
     "styled-components": "^5.1.1"
+  },
+  "types": "lib/index.d.ts",
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "jest-styled-components"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css|less|svg)$": "identity-obj-proxy"
+    }
   }
 }
