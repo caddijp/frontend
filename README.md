@@ -13,9 +13,9 @@ This repository is managed as monorepo.
 
 | Package                                                      | Version                                                                                                                              |
 | :----------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| **[@caddijp/components](./packages/components)**             | [![NPM version](https://badge.fury.io/js/%40caddijp%2Fcomponents.svg)](https://badge.fury.io/js/%40caddijp%2Fstylelint-config)       |
 | **[@caddijp/eslint-config](./packages/eslint-config)**       | [![NPM version](https://badge.fury.io/js/%40caddijp%2Feslint-config.svg)](https://badge.fury.io/js/%40caddijp%2Feslint-config)       |
 | **[@caddijp/stylelint-config](./packages/stylelint-config)** | [![NPM version](https://badge.fury.io/js/%40caddijp%2Fstylelint-config.svg)](https://badge.fury.io/js/%40caddijp%2Fstylelint-config) |
-| **[@caddijp/components](./packages/components)** | [![NPM version](https://badge.fury.io/js/%40caddijp%2Fcomponents.svg)](https://badge.fury.io/js/%40caddijp%2Fstylelint-config) |
 
 ## Contributing
 
@@ -23,4 +23,4 @@ PRs accepted.
 
 ## License
 
-[MIT](./LICENSE) © Caddi Co.,Ltd
+[MIT](./LICENSE) or [GPL-v3](./packages/components/LICENSE) © Caddi Co.,Ltd

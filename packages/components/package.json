@@ -2,7 +2,7 @@
   "name": "@caddijp/components",
   "version": "0.0.4",
   "description": "CADDi ui components built with React.",
-  "license": "MIT",
+  "license": "GPL-v3",
   "repository": "git@github.com:caddijp/frontend.git",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -15,6 +15,10 @@
     "start-storybook": "start-storybook -c .storybook",
     "test": "jest"
   },
+  "files": [
+    "esm",
+    "lib"
+  ],
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
