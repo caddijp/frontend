@@ -6,5 +6,5 @@ export default {
 };
 
 export function _Button() {
-  return <Button />;
+  return <Button>button</Button>;
 }
