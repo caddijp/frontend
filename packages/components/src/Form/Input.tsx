@@ -62,7 +62,6 @@ const BaseInput: React.FC<Props> = (props) => {
       onChange={props.onChange}
       placeholder={props.placeholder}
       type="text"
-      className={props.className}
       hasAddonBefore={!!props.addonBefore}
       hasAddonAfter={!!props.addonAfter}
     />
