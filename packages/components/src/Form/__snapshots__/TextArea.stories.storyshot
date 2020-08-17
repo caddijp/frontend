@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties TextArea Disabled 1`] = `
+exports[`FileProperties Form/TextArea Disabled 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
@@ -66,7 +66,7 @@ exports[`FileProperties TextArea Disabled 1`] = `
 />
 `;
 
-exports[`FileProperties TextArea Readonly 1`] = `
+exports[`FileProperties Form/TextArea Readonly 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
@@ -133,7 +133,7 @@ exports[`FileProperties TextArea Readonly 1`] = `
 />
 `;
 
-exports[`FileProperties TextArea With Handlers 1`] = `
+exports[`FileProperties Form/TextArea With Handlers 1`] = `
 Array [
   .c0 {
   box-sizing: border-box;
@@ -214,7 +214,7 @@ Array [
 ]
 `;
 
-exports[`FileProperties TextArea With Placeholder 1`] = `
+exports[`FileProperties Form/TextArea With Placeholder 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
@@ -280,7 +280,7 @@ exports[`FileProperties TextArea With Placeholder 1`] = `
 />
 `;
 
-exports[`FileProperties TextArea With Value 1`] = `
+exports[`FileProperties Form/TextArea With Value 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;

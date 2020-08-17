@@ -3,7 +3,7 @@ import React from 'react';
 import { TextArea, TextAreaProps } from '.';
 
 export default {
-  title: 'TextArea',
+  title: 'Form/TextArea',
 };
 
 const Template: Story<TextAreaProps> = (args) => <TextArea {...args} />;
