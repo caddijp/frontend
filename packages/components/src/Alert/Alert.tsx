@@ -15,6 +15,7 @@ const Wrapper = styled.div<{ type?: AlertType }>`
   padding: 12px 16px;
   font-size: 14px;
   line-height: 14px;
+  text-align: left;
   background-color: ${(props) =>
     props.type === 'info' ? '#e6f7ff' : props.type === 'warning' ? '#fffbe6' : '#fff1f0'};
   border: 1px solid
