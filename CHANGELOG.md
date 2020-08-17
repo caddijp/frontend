@@ -1,3 +1,15 @@
+## v0.0.5 (2020-08-17)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#18](https://github.com/caddijp/frontend/pull/18) fix: tiny design ([@sottar](https://github.com/sottar))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.4 (2020-08-15)
 
 #### :rocket: Type: Feature
