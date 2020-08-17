@@ -1,3 +1,22 @@
+## v0.0.8 (2020-08-17)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#27](https://github.com/caddijp/frontend/pull/27) fix: style ([@sottar](https://github.com/sottar))
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#28](https://github.com/caddijp/frontend/pull/28) feat: alert component ([@sottar](https://github.com/sottar))
+- `eslint-config`
+  - [#25](https://github.com/caddijp/frontend/pull/25) chore(packages/eslint-config): add custom rules ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.5 (2020-08-17)
 
 #### :bug: Type: Bug
