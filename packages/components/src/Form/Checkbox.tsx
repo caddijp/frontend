@@ -6,7 +6,6 @@ interface Props {
   disabled?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
-  id?: string;
 }
 
 const Wrapper = styled.div`
@@ -66,7 +65,6 @@ const Checkbox: React.FC<Props> = (props) => {
           checked={props.checked}
           disabled={props.disabled}
           onChange={props.onChange}
-          id={props.id}
         />
         {props.children}
       </label>
