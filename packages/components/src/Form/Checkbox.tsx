@@ -11,6 +11,7 @@ interface Props {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   span {
     padding-left: 8px;
     font-size: 14px;
