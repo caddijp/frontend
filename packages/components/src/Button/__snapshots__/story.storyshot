@@ -2,7 +2,7 @@
 
 exports[`FileProperties Button Button 1`] = `
 .c0 {
-  padding: 5px 16px;
+  padding: 4px 16px;
   text-align: center;
   cursor: pointer;
   background: #fff;
@@ -17,6 +17,10 @@ exports[`FileProperties Button Button 1`] = `
   opacity: 0.5;
 }
 
+.c0:disabled {
+  cursor: not-allowed;
+}
+
 .c1 {
   color: #1890ff;
   border: 1px solid #1890ff;
@@ -24,5 +28,7 @@ exports[`FileProperties Button Button 1`] = `
 
 <button
   className="c0 c1"
-/>
+>
+  button
+</button>
 `;

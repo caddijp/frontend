@@ -13,7 +13,7 @@ type ButtonProps = {
 };
 
 const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
-  padding: 5px 16px;
+  padding: 4px 16px;
   text-align: center;
   cursor: pointer;
   background: #fff;
@@ -24,12 +24,15 @@ const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   &:hover {
     opacity: 0.5;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 const BaseButton: React.FC<ButtonProps> = (props) => {
   return (
     <BaseWrapper
-      onClick={props.onClick}
+      onClick={props.disabled ? void 0 : props.onClick}
       className={props.className}
       disabled={props.disabled}
       isLoading={props.isLoading}

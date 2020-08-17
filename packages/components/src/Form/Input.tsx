@@ -49,6 +49,7 @@ const StyledInput = styled.input<{
   border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
   border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   &:disabled {
+    cursor: not-allowed;
     background: #fafafa;
   }
 `;
@@ -70,7 +71,7 @@ const BaseInput: React.FC<Props> = (props) => {
 
 const Input: React.FC<Props> = (props) => {
   if (!props.addonAfter && !props.addonBefore) {
-    return <BaseInput {...props} />;
+    return <BaseInput {...props} className={props.className} />;
   }
   return (
     <Wrapper className={props.className}>
