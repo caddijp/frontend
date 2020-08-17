@@ -6,15 +6,17 @@ interface Props {
   disabled?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
+  id?: string;
 }
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  span {
-    padding-left: 8px;
-    font-size: 14px;
+  font-size: 14px;
+  label {
+    display: flex;
+    align-items: center;
     color: rgba(0, 0, 0, 0.65);
   }
 `;
@@ -23,6 +25,7 @@ const StyledCheckbox = styled.input`
   position: relative;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   cursor: pointer;
   border-collapse: separate;
   background-color: #fff;
@@ -57,13 +60,16 @@ const StyledCheckbox = styled.input`
 const Checkbox: React.FC<Props> = (props) => {
   return (
     <Wrapper className={props.className}>
-      <StyledCheckbox
-        type="checkbox"
-        checked={props.checked}
-        disabled={props.disabled}
-        onChange={props.onChange}
-      />
-      <span>{props.children}</span>
+      <label>
+        <StyledCheckbox
+          type="checkbox"
+          checked={props.checked}
+          disabled={props.disabled}
+          onChange={props.onChange}
+          id={props.id}
+        />
+        {props.children}
+      </label>
     </Wrapper>
   );
 };
