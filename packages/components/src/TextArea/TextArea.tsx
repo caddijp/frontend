@@ -3,11 +3,17 @@ import styled from 'styled-components';
 
 export type TextAreaProps = {
   className?: string;
+  defaultValue?: string;
+  value?: string;
   placeholder?: string;
   rows?: number;
+  disabled?: boolean;
+  readOnly?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+  onBlur?: React.ChangeEventHandler<HTMLTextAreaElement>;
 };
 
-const Wrapper = styled.textarea`
+const TextAreaComponent = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
@@ -31,19 +37,29 @@ const Wrapper = styled.textarea`
 
   &:hover {
     border-color: #40a9ff;
-    border-right-width: 1px !important;
+    border-right-width: 1px;
   }
 
   &:focus {
     border-color: #40a9ff;
-    border-right-width: 1px !important;
+    border-right-width: 1px;
     outline: 0;
     box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+
+  &[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    opacity: 1;
+    &:hover {
+      border-color: #d9d9d9;
+    }
   }
 `;
 
 const TextArea: React.FC<TextAreaProps> = (props) => {
-  return <Wrapper {...props} />;
+  return <TextAreaComponent {...props} />;
 };
 
 export default TextArea;
