@@ -111,3 +111,4 @@ const Button: React.FC<ButtonProps | TextButtonProps> = (props) => {
 
 export default Button;
 export { Button };
+export type { ButtonProps };
