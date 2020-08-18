@@ -24,3 +24,4 @@ const Caution: React.FC<CautionProps> = ({ children, className }) => {
 
 export default Caution;
 export { Caution };
+export type { CautionProps };
