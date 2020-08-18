@@ -22,8 +22,6 @@
 
 #### :rocket: Type: Feature
 
-- `components`, `eslint-config`, `stylelint-config`
-  - [#29](https://github.com/caddijp/frontend/pull/29) chore: bump v0.0.6 ([@sottar](https://github.com/sottar))
 - `components`
   - [#28](https://github.com/caddijp/frontend/pull/28) feat: alert component ([@sottar](https://github.com/sottar))
 - `eslint-config`
