@@ -15,18 +15,18 @@ const Template: Story<_ButtonProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'button',
+  children: 'default button',
   type: 'default',
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: 'button',
+  children: 'primary button',
   type: 'primary',
 };
 
 export const Text = Template.bind({});
 Text.args = {
-  children: 'button',
+  children: 'text button',
   type: 'text',
 };
