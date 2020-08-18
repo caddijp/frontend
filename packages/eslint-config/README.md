@@ -18,4 +18,4 @@ npm install -D @caddijp/eslint-config eslint typescript
 
 ## License
 
-MIT
+[MIT](../../LICENSE)

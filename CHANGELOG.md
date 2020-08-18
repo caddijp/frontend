@@ -1,24 +1,15 @@
 ## v0.0.7 (2020-08-18)
 
-#### :bug: Type: Bug
-
-- `components`
-  - [#27](https://github.com/caddijp/frontend/pull/27) fix: style ([@sottar](https://github.com/sottar))
-
 #### :rocket: Type: Feature
 
+- `components`, `eslint-config`, `stylelint-config`
+  - [#31](https://github.com/caddijp/frontend/pull/31) chore: bump v0.0.7 ([@sottar](https://github.com/sottar))
 - `components`
   - [#30](https://github.com/caddijp/frontend/pull/30) feat: text button component ([@sottar](https://github.com/sottar))
   - [#26](https://github.com/caddijp/frontend/pull/26) Add TextArea component ([@enzinia](https://github.com/enzinia))
-  - [#28](https://github.com/caddijp/frontend/pull/28) feat: alert component ([@sottar](https://github.com/sottar))
-- `components`, `eslint-config`, `stylelint-config`
-  - [#29](https://github.com/caddijp/frontend/pull/29) chore: bump v0.0.6 ([@sottar](https://github.com/sottar))
-- `eslint-config`
-  - [#25](https://github.com/caddijp/frontend/pull/25) chore(packages/eslint-config): add custom rules ([@9renpoto](https://github.com/9renpoto))
 
-#### Committers: 3
+#### Committers: 2
 
-- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
 - Kukovskii Vladimir ([@enzinia](https://github.com/enzinia))
 - Sota Ohara ([@sottar](https://github.com/sottar))
 

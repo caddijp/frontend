@@ -18,4 +18,4 @@ npm install -D @caddijp/stylelint-config stylelint
 
 ## License
 
-MIT
+[MIT](../../LICENSE)
