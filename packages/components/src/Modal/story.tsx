@@ -17,10 +17,11 @@ const ExportModalContent = () => {
           <li>aaaa-aaaa-aaaa</li>
           <li>aaaa-aaaa-aaaa</li>
           <li>aaaa-aaaa-aaaa</li>
+          <li>aaaa-aaaa-aaaa</li>
         </ul>
       </div>
       <div className="exportButtonArea">
-        <input type="text" name="" id="inputText" />
+        <input type="text" name="input" id="inputText" />
         <button>test</button>
       </div>
     </div>
