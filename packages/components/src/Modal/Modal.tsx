@@ -20,8 +20,6 @@ const customStyles: ReactModalStyles = {
 const StyledModal = styled(ReactModal)`
   position: absolute;
   top: 50%;
-  right: auto;
-  bottom: auto;
   left: 50%;
   width: 568px;
   max-height: 80vh;
