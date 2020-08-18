@@ -4,10 +4,9 @@ import { Input } from '.';
 import type { InputProps } from '.';
 
 export default {
-  title: 'Input',
+  title: 'Form/Input',
   component: Input,
   parameters: { actions: { argTypesRegex: '^on.*' } },
-  args: {},
 } as Meta<InputProps>;
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;

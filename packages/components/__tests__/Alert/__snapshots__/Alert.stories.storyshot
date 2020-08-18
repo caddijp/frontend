@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Alert Error 1`] = `
+exports[`FileProperties Alert/Alert Error 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 16px;
@@ -53,7 +53,7 @@ exports[`FileProperties Alert Error 1`] = `
 </div>
 `;
 
-exports[`FileProperties Alert Info 1`] = `
+exports[`FileProperties Alert/Alert Info 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 16px;
@@ -106,7 +106,7 @@ exports[`FileProperties Alert Info 1`] = `
 </div>
 `;
 
-exports[`FileProperties Alert Warning 1`] = `
+exports[`FileProperties Alert/Alert Warning 1`] = `
 .c0 {
   width: 100%;
   padding: 12px 16px;

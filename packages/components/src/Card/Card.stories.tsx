@@ -9,7 +9,6 @@ export default {
   title: 'Card',
   component: Card,
   parameters: { actions: { argTypesRegex: '^on.*' } },
-  args: {},
 } as Meta<_CardProps>;
 
 const Template: Story<_CardProps> = (args) => <Card {...args} />;

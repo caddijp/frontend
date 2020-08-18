@@ -1,10 +1,12 @@
-import { Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { TextArea, TextAreaProps } from '.';
 
 export default {
   title: 'Form/TextArea',
-};
+  component: TextArea,
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+} as Meta<TextAreaProps>;
 
 const Template: Story<TextAreaProps> = (args) => <TextArea {...args} />;
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Caution Basic 1`] = `
+exports[`FileProperties Alert/Caution Basic 1`] = `
 .c0 {
   margin: 0 auto;
   font-size: 11px;

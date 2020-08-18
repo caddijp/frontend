@@ -4,10 +4,9 @@ import { Checkbox } from '.';
 import type { CheckboxProps } from '.';
 
 export default {
-  title: 'Checkbox',
+  title: 'Form/Checkbox',
   component: Checkbox,
   parameters: { actions: { argTypesRegex: '^on.*' } },
-  args: {},
 } as Meta<CheckboxProps>;
 
 const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;

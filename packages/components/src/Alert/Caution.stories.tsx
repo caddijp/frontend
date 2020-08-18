@@ -6,7 +6,7 @@ import type { CautionProps } from '.';
 type _CautionProps = PropsWithChildren<CautionProps>;
 
 export default {
-  title: 'Caution',
+  title: 'Alert/Caution',
   component: Caution,
   parameters: { actions: { argTypesRegex: '^on.*' } },
 } as Meta<_CautionProps>;

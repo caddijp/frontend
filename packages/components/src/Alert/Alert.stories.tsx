@@ -4,10 +4,9 @@ import { Alert } from '.';
 import type { AlertProps } from '.';
 
 export default {
-  title: 'Alert',
+  title: 'Alert/Alert',
   component: Alert,
   parameters: { actions: { argTypesRegex: '^on.*' } },
-  args: {},
 } as Meta<AlertProps>;
 
 const Template: Story<AlertProps> = (args) => <Alert {...args} />;

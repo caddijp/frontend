@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Input With Addon After 1`] = `
+exports[`FileProperties Form/Input With Addon After 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,7 +62,7 @@ exports[`FileProperties Input With Addon After 1`] = `
 </div>
 `;
 
-exports[`FileProperties Input With Addon Before 1`] = `
+exports[`FileProperties Form/Input With Addon Before 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
