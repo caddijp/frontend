@@ -3,6 +3,6 @@
  * https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
  */
 module.exports = {
-  stories: ['../src/**/*.(stories|story).tsx'],
+  stories: ['../src/**/*.stories.tsx', '../src/**/story.tsx'],
   addons: ['@storybook/addon-essentials'],
 };
