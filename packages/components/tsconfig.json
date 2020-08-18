@@ -2,9 +2,10 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
+    "module": "ESNext",
     "lib": ["es2018", "dom"],
-    "jsx": "react"
+    "jsx": "react",
+    "allowJs": true
   },
   "include": ["src/**/*"]
 }

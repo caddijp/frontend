@@ -1,0 +1,7 @@
+base-branches:
+  - master
+size-files:
+  - dir: packages/components/lib
+    filename: components.js
+  - dir: packages/components/lib
+    filename: components.modern.js

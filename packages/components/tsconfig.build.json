@@ -2,7 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./lib",
-    "noEmit": false
+    "noEmit": false,
+    "allowJs": false
   },
   "exclude": [
     "node_modules",
