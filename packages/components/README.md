@@ -17,3 +17,7 @@ yarn add @caddijp/components
 # Development
 
 TBD.
+
+## License
+
+[MIT](../../LICENSE)
