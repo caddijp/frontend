@@ -27,7 +27,7 @@ const ExportModalContent = () => {
   );
 };
 
-export const ExportTemplate: Story<ModalProps> = (args: ModalProps) => (
+const ExportTemplate: Story<ModalProps> = (args: ModalProps) => (
   <Modal {...args}>
     <ExportModalContent />
   </Modal>
