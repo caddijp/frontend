@@ -9,22 +9,13 @@ export default {
   component: Modal,
 };
 
-const ExportModalChildrenWrapper = styled.div``;
-
 const ExportModalContent = styled.div`
-  top: 24px;
-  left: 24px;
-  width: 80%;
-  height: 60%;
   color: rgba(0, 0, 0, 0.65);
 `;
 
-const ExportModalContentTitle = styled.span`
-  padding-inline-start: 40px;
-`;
-
 const ExportFilePageIdList = styled.ul`
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
   list-style: none;
 `;
 
@@ -62,39 +53,40 @@ const ExportModalButton = styled(Button)`
   height: 32px;
 `;
 
-const ExportModalChildren = () => {
+const ExportModalBodyChildren = () => {
   return (
-    <ExportModalChildrenWrapper>
-      <ExportModalContent>
-        <ExportFilePageIdList>
-          <li style={{ fontWeight: 'bold' }}>選択中の図面5件</li>
-          <li>aaaa-aaaa-aaaa</li>
-          <li>aaaa-aaaa-aaaa</li>
-          <li>aaaa-aaaa-aaaa</li>
-          <li>aaaa-aaaa-aaaa</li>
-          <li>aaaa-aaaa-aaaa</li>
-        </ExportFilePageIdList>
-      </ExportModalContent>
-      <ExportModalFooter>
-        <ExportModalInputArea>
-          <ExportModalInput placeholder="ファイル名を入力※必須"></ExportModalInput>
-          <ExportModalInputFileExtentionArea>.pdf</ExportModalInputFileExtentionArea>
-        </ExportModalInputArea>
-        <ExportModalButton type="primary">エクスポートする</ExportModalButton>
-      </ExportModalFooter>
-    </ExportModalChildrenWrapper>
+    <ExportModalContent>
+      <ExportFilePageIdList>
+        <li style={{ fontWeight: 'bold' }}>選択中の図面5件</li>
+        <li>aaaa-aaaa-aaaa</li>
+        <li>aaaa-aaaa-aaaa</li>
+        <li>aaaa-aaaa-aaaa</li>
+        <li>aaaa-aaaa-aaaa</li>
+        <li>aaaa-aaaa-aaaa</li>
+      </ExportFilePageIdList>
+    </ExportModalContent>
   );
 };
 
-const ExportTemplate: Story<ModalProps> = (args: ModalProps) => (
-  <Modal {...args}>
-    <ExportModalChildren />
-  </Modal>
-);
+const ExportModalFooterChildern = () => {
+  return (
+    <ExportModalFooter>
+      <ExportModalInputArea>
+        <ExportModalInput placeholder="ファイル名を入力※必須"></ExportModalInput>
+        <ExportModalInputFileExtentionArea>.pdf</ExportModalInputFileExtentionArea>
+      </ExportModalInputArea>
+      <ExportModalButton type="primary">エクスポートする</ExportModalButton>
+    </ExportModalFooter>
+  );
+};
+
+const ExportTemplate: Story<ModalProps> = (args: ModalProps) => <Modal {...args}></Modal>;
 
 export const ExportModal = ExportTemplate.bind({});
 
 ExportModal.args = {
   title: 'エクスポート',
+  body: ExportModalBodyChildren(),
+  footer: ExportModalFooterChildern(),
   isOpen: true,
 };

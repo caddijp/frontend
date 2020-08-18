@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 export interface ModalProps extends ReactModalProps {
   title: string;
+  body: JSX.Element;
+  footer: JSX.Element;
 }
 
 const customStyles: ReactModalStyles = {
@@ -56,6 +58,12 @@ const StyledCloseButton = styled.button`
 `;
 
 const StyledModalBody = styled.div`
+  max-height: calc(80vh - 55px);
+  padding: 24px;
+  background-color: #fff;
+`;
+
+const StyledModalFooter = styled.div`
   width: 100%;
   max-height: calc(80vh - 55px);
   background-color: #fff;
@@ -70,7 +78,8 @@ const Modal: React.FC<ModalProps> = (props) => {
           <CloseOutlined />
         </StyledCloseButton>
       </StyledModalHeader>
-      <StyledModalBody>{props.children}</StyledModalBody>
+      <StyledModalBody>{props.body}</StyledModalBody>
+      <StyledModalFooter>{props.footer}</StyledModalFooter>
     </StyledModal>
   );
 };
