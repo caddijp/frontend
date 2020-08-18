@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Props {
+interface CheckboxProps {
   checked: boolean;
   disabled?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -56,7 +56,7 @@ const StyledCheckbox = styled.input`
   }
 `;
 
-const Checkbox: React.FC<Props> = (props) => {
+const Checkbox: React.FC<CheckboxProps> = (props) => {
   return (
     <Wrapper className={props.className}>
       <label>
@@ -74,3 +74,4 @@ const Checkbox: React.FC<Props> = (props) => {
 
 export default Checkbox;
 export { Checkbox };
+export type { CheckboxProps };

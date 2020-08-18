@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Button Button 1`] = `
+exports[`FileProperties Button Default 1`] = `
 .c0 {
   padding: 4px 16px;
   text-align: center;
@@ -29,6 +29,78 @@ exports[`FileProperties Button Button 1`] = `
 <button
   className="c0 c1"
 >
-  button
+  default button
+</button>
+`;
+
+exports[`FileProperties Button Primary 1`] = `
+.c0 {
+  padding: 4px 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 2px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.c0:hover {
+  opacity: 0.5;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c1 {
+  color: #fff;
+  background: #1890ff;
+  border: 1px solid #1890ff;
+}
+
+<button
+  className="c0 c1"
+>
+  primary button
+</button>
+`;
+
+exports[`FileProperties Button Text 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: #3582e5;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.c0:hover {
+  opacity: 0.5;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+<button
+  className="c0"
+>
+  text button
 </button>
 `;

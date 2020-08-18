@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Props {
+interface InputProps {
   width?: string;
   value: string;
   disabled?: boolean;
@@ -54,7 +54,7 @@ const StyledInput = styled.input<{
   }
 `;
 
-const BaseInput: React.FC<Props> = (props) => {
+const BaseInput: React.FC<InputProps> = (props) => {
   return (
     <StyledInput
       width={props.width}
@@ -69,7 +69,7 @@ const BaseInput: React.FC<Props> = (props) => {
   );
 };
 
-const Input: React.FC<Props> = (props) => {
+const Input: React.FC<InputProps> = (props) => {
   if (!props.addonAfter && !props.addonBefore) {
     return <BaseInput {...props} className={props.className} />;
   }
@@ -84,3 +84,4 @@ const Input: React.FC<Props> = (props) => {
 
 export default Input;
 export { Input };
+export type { InputProps };

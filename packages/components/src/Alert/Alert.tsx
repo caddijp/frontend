@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 type AlertType = 'error' | 'warning' | 'info';
 
-interface Props {
+interface AlertProps {
   type?: AlertType;
   message: string | JSX.Element;
   className?: string;
@@ -28,7 +28,7 @@ const Wrapper = styled.div<{ type?: AlertType }>`
   }
 `;
 
-const Alert: React.FC<Props> = ({ type, message, className }) => {
+const Alert: React.FC<AlertProps> = ({ type, message, className }) => {
   return (
     <Wrapper type={type} className={className}>
       {(type === 'error' || !type) && <CloseCircleFilled style={{ color: '#ff4d4f' }} />}
@@ -41,3 +41,4 @@ const Alert: React.FC<Props> = ({ type, message, className }) => {
 
 export default Alert;
 export { Alert };
+export type { AlertProps };
