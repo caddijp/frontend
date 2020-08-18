@@ -49,7 +49,8 @@ const StyledModalTitle = styled.div`
 `;
 
 const StyledCloseButton = styled.button`
-  margin-right: 15px;
+  width: 55px;
+  height: 55px;
   background: none;
   border: none;
 `;
