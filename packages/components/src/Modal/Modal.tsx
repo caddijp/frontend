@@ -23,7 +23,6 @@ const StyledModal = styled(ReactModal)`
   left: 50%;
   width: 568px;
   max-height: 80vh;
-  margin-right: -50%;
   background: #fff;
   border-radius: 2px;
   box-shadow: 0 9px 28px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.12),
