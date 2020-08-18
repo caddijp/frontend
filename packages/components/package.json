@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
-    "antd": "^4.5.4"
+    "antd": "^4.5.4",
+    "react-modal": "^3.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -33,6 +34,7 @@
     "@storybook/react": "^6.0.12",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
+    "@types/react-modal": "^3.10.6",
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
     "jest-styled-components": "^7.0.2",
