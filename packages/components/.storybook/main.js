@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * Declarative Storybook configuration as of Storybook 5.3
  * https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
@@ -13,5 +15,14 @@ module.exports = {
         esModuleInterop: true,
       },
     },
+  },
+  // https://storybook.js.org/docs/react/configure/webpack#extending-storybooks-webpack-config
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+      include: path.resolve(__dirname, '../')
+    });
+    return config;
   },
 };
