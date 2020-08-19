@@ -36,6 +36,7 @@
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest-styled-components": "^7.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
