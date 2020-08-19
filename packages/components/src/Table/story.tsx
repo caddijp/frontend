@@ -31,21 +31,18 @@ const columns = [
 
 const data = [
   {
-    key: '1',
     name: <a href="#">John Brown</a>,
     age: 32,
     address: 'New York No. 1 Lake Park',
     action: <button>Delete</button>,
   },
   {
-    key: '2',
     name: <a href="#">Jim Green</a>,
     age: 42,
     address: 'London No. 1 Lake Park',
     action: <button>Delete</button>,
   },
   {
-    key: '3',
     name: <a href="#">Joe Black</a>,
     age: 32,
     address: 'Sidney No. 1 Lake Park',

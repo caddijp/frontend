@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type ColumnsType = { [index: string]: string }[];
+type ColumnsType = { key: string; title: string }[];
 type DataType = { [index: string]: string | number | JSX.Element | JSX.Element[] }[];
 
 export type TableProps = {
@@ -9,22 +9,6 @@ export type TableProps = {
   data: DataType;
   className?: string;
 };
-
-const Wrapper = styled.div`
-  position: relative;
-  z-index: 0;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-  clear: both;
-  line-height: 1.5715;
-  color: rgba(0, 0, 0, 0.65);
-  list-style: none;
-  background: #fff;
-  border-radius: 2px;
-  font-feature-settings: 'tnum';
-`;
 
 const StyledTable = styled.table`
   width: 100%;
@@ -35,10 +19,9 @@ const StyledTable = styled.table`
 `;
 
 const StyledTableHead = styled.thead`
-  & > tr > th {
+  > tr > th {
     position: relative;
     padding: 16px;
-    font-weight: 500;
     color: rgba(0, 0, 0, 0.85);
     text-align: left;
     overflow-wrap: break-word;
@@ -49,8 +32,8 @@ const StyledTableHead = styled.thead`
 `;
 
 const StyledTableBody = styled.tbody`
-  & > tr {
-    & > td {
+  > tr {
+    > td {
       position: relative;
       padding: 16px;
       overflow-wrap: break-word;
@@ -64,11 +47,11 @@ const StyledTableBody = styled.tbody`
   }
 `;
 
-const renderHeader = (columns: TableProps['columns']): JSX.Element[] => {
+const renderHeader = (columns: ColumnsType): JSX.Element[] => {
   return columns.map((column) => <th key={column.key}>{column.title}</th>);
 };
 
-const renderBody = (data: TableProps['data'], columns: TableProps['columns']): JSX.Element[] => {
+const renderBody = (data: DataType, columns: ColumnsType): JSX.Element[] => {
   return data.map((data, index) => {
     return (
       <tr key={index}>
@@ -82,14 +65,12 @@ const renderBody = (data: TableProps['data'], columns: TableProps['columns']): J
 
 const Table: React.FC<TableProps> = (props) => {
   return (
-    <Wrapper>
-      <StyledTable className={props.className}>
-        <StyledTableHead>
-          <tr>{renderHeader(props.columns)}</tr>
-        </StyledTableHead>
-        <StyledTableBody>{renderBody(props.data, props.columns)}</StyledTableBody>
-      </StyledTable>
-    </Wrapper>
+    <StyledTable className={props.className}>
+      <StyledTableHead>
+        <tr>{renderHeader(props.columns)}</tr>
+      </StyledTableHead>
+      <StyledTableBody>{renderBody(props.data, props.columns)}</StyledTableBody>
+    </StyledTable>
   );
 };
 
