@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  storybook:
+  build_storybook_and_notify:
     docker:
       - image: circleci/node:lts
         environment:
@@ -21,10 +21,10 @@ jobs:
 
       - store_artifacts:
           path: packages/components/storybook-static
-      - run: npx moxci packages/components/storybook-static/index.html
+      - run: yarn moxci packages/components/storybook-static/index.html
 
 workflows:
   version: 2
   workflow:
     jobs:
-      - storybook
+      - build_storybook_and_notify
