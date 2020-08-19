@@ -42,7 +42,7 @@
   "types": "lib/index.d.ts",
   "jest": {
     "transform": {
-      "^.+\\.(t|j)sx?$": "ts-jest"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "setupFilesAfterEnv": [
       "jest-styled-components"
