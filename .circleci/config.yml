@@ -21,7 +21,7 @@ jobs:
 
       - store_artifacts:
           path: packages/components/storybook-static
-      - run: yarn moxci packages/components/storybook-static/index.html
+      - run: npx moxci packages/components/storybook-static/index.html
 
 workflows:
   version: 2
