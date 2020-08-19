@@ -30,6 +30,7 @@
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
     "lint-staged": "^10.2.11",
+    "moxci": "^0.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "prettier-plugin-organize-imports": "^1.1.1",
