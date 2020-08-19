@@ -1,3 +1,5 @@
+const path = require('path');
+
 /**
  * Declarative Storybook configuration as of Storybook 5.3
  * https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
