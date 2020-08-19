@@ -78,7 +78,7 @@ const Modal: React.FC<ModalProps> = (props) => {
         </StyledCloseButton>
       </StyledModalHeader>
       <StyledModalBody>{props.children}</StyledModalBody>
-      {props.footer ? <StyledModalFooter>{props.footer}</StyledModalFooter> : ''}
+      {props.footer && <StyledModalFooter>{props.footer}</StyledModalFooter>}
     </StyledModal>
   );
 };
