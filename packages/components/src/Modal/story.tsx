@@ -27,8 +27,6 @@ const ExportModalFooter = styled.div`
   justify-content: space-around;
   width: 568px;
   height: 53px;
-  border-radius: 2px;
-  box-shadow: inset 0 1px 0 #f0f0f0;
 `;
 
 const ExportModalInputArea = styled.div`
@@ -80,13 +78,16 @@ const ExportModalFooterChildern = () => {
   );
 };
 
-const ExportTemplate: Story<ModalProps> = (args: ModalProps) => <Modal {...args}></Modal>;
+const ExportTemplate: Story<ModalProps> = (args: ModalProps) => (
+  <Modal {...args}>
+    <ExportModalBodyChildren />
+  </Modal>
+);
 
 export const ExportModal = ExportTemplate.bind({});
 
 ExportModal.args = {
   title: 'エクスポート',
-  body: ExportModalBodyChildren(),
   footer: ExportModalFooterChildern(),
   isOpen: true,
 };
