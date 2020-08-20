@@ -40,7 +40,7 @@ import 'antd/lib/style/index.css';
 // import 'antd/lib/modal/style/index.css';
 // import 'antd/lib/notification/style/index.css';
 // import 'antd/lib/page-header/style/index.css';
-// import 'antd/lib/pagination/style/index.css';
+import 'antd/lib/pagination/style/index.css';
 // import 'antd/lib/popover/style/index.css';
 // import 'antd/lib/progress/style/index.css';
 // import 'antd/lib/radio/style/index.css';
