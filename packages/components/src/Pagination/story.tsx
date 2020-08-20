@@ -5,7 +5,8 @@ import { Pagination } from '.';
 
 // AntdのStyleを読み込めるようになった後にテスト対象に加える
 export default {
-  title: 'Pagination DontTest',
+  title: 'Pagination/Pagination DontTest',
+  component: Pagination,
 };
 
 const Template: Story<PaginationProps> = (args) => <Pagination {...args} />;
