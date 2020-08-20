@@ -1,3 +1,26 @@
+## v0.0.8 (2020-08-20)
+
+#### :bug: Type: Bug
+
+- `components`, `eslint-config`
+  - [#36](https://github.com/caddijp/frontend/pull/36) fix: stories glob ([@9renpoto](https://github.com/9renpoto))
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#42](https://github.com/caddijp/frontend/pull/42) Pagination Component を実装 ([@scabyms](https://github.com/scabyms))
+  - [#46](https://github.com/caddijp/frontend/pull/46) feat: add antd styles ([@tkiryu](https://github.com/tkiryu))
+  - [#40](https://github.com/caddijp/frontend/pull/40) feat: add table component ([@enzinia](https://github.com/enzinia))
+  - [#33](https://github.com/caddijp/frontend/pull/33) impl modal component ([@scabyms](https://github.com/scabyms))
+  - [#34](https://github.com/caddijp/frontend/pull/34) Add @storybook/addon-essentials ([@tkiryu](https://github.com/tkiryu))
+
+#### Committers: 4
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Kukovskii Vladimir ([@enzinia](https://github.com/enzinia))
+- Tatsushi Kiryu ([@tkiryu](https://github.com/tkiryu))
+- scabyms ([@scabyms](https://github.com/scabyms))
+
 ## v0.0.7 (2020-08-18)
 
 #### :rocket: Type: Feature
