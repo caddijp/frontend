@@ -1,3 +1,14 @@
+## v0.0.9 (2020-08-21)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#48](https://github.com/caddijp/frontend/pull/48) fix: modal component ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.8 (2020-08-20)
 
 #### :bug: Type: Bug
