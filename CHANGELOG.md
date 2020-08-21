@@ -1,3 +1,14 @@
+## v0.0.10 (2020-08-21)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#50](https://github.com/caddijp/frontend/pull/50) fix: pagenation component ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.9 (2020-08-21)
 
 #### :bug: Type: Bug
