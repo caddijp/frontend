@@ -54,6 +54,17 @@ const StyledCheckbox = styled.input`
   &:focus {
     outline: 0;
   }
+  &:disabled {
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    &:checked {
+      &::after {
+        border: 2px solid rgba(0, 0, 0, 0.25);
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+  }
 `;
 
 const Checkbox: React.FC<CheckboxProps> = (props) => {
