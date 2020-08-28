@@ -12,3 +12,7 @@ export default {
 const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 
 export const Basic = Template.bind({});
+
+const DisabledTemplate: Story<CheckboxProps> = (args) => <Checkbox {...args} disabled />;
+
+export const Disabled = DisabledTemplate.bind({});
