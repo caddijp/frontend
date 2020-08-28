@@ -1,3 +1,14 @@
+## v0.0.12 (2020-08-28)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#55](https://github.com/caddijp/frontend/pull/55) fix: checkbox type ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.11 (2020-08-28)
 
 #### :rocket: Type: Feature
