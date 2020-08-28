@@ -8,7 +8,7 @@ interface CheckboxProps {
   className?: string;
 }
 
-const Wrapper = styled.div<{ disabled: boolean }>`
+const Wrapper = styled.div<{ disabled?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
