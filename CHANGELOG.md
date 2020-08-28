@@ -1,3 +1,15 @@
+## v0.0.11 (2020-08-28)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#53](https://github.com/caddijp/frontend/pull/53) fix: modal style ([@sottar](https://github.com/sottar))
+  - [#52](https://github.com/caddijp/frontend/pull/52) Feature/disable style for checkbox ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.10 (2020-08-21)
 
 #### :bug: Type: Bug
