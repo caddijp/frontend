@@ -56,8 +56,9 @@ const StyledCloseButton = styled.button`
 `;
 
 const StyledModalBody = styled.div`
-  max-height: calc(80vh - 55px);
+  max-height: calc(80vh - 100px);
   padding: 24px;
+  overflow: scroll;
   background-color: #fff;
 `;
 
