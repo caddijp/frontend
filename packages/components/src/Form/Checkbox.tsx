@@ -8,7 +8,7 @@ interface CheckboxProps {
   className?: string;
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ disabled: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   label {
     display: flex;
     align-items: center;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.65)')};
   }
 `;
 
@@ -69,7 +69,7 @@ const StyledCheckbox = styled.input`
 
 const Checkbox: React.FC<CheckboxProps> = (props) => {
   return (
-    <Wrapper className={props.className}>
+    <Wrapper className={props.className} disabled={props.disabled}>
       <label>
         <StyledCheckbox
           type="checkbox"
