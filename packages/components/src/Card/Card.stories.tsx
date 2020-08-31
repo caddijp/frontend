@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React, { PropsWithChildren } from 'react';
-import { Card } from '.';
 import type { CardProps } from '.';
+import { Card } from '.';
 
 type _CardProps = PropsWithChildren<CardProps>;
 

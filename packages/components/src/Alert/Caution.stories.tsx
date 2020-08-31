@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React, { PropsWithChildren } from 'react';
-import { Caution } from '.';
 import type { CautionProps } from '.';
+import { Caution } from '.';
 
 type _CautionProps = PropsWithChildren<CautionProps>;
 

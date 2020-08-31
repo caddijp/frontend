@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React, { PropsWithChildren } from 'react';
-import { Button } from '.';
 import type { ButtonProps } from '.';
+import { Button } from '.';
 
 type _ButtonProps = PropsWithChildren<ButtonProps>;
 

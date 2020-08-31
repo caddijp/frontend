@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Input } from '.';
 import type { InputProps } from '.';
+import { Input } from '.';
 
 export default {
   title: 'Form/Input',
