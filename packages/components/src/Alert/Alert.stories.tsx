@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Alert } from '.';
 import type { AlertProps } from '.';
+import { Alert } from '.';
 
 export default {
   title: 'Alert/Alert',
