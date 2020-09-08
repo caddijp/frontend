@@ -1,3 +1,16 @@
+# v0.0.13 (2020-09-08)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#59](https://github.com/caddijp/frontend/pull/59) chore(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+- `components`, `eslint-config`
+  - [#58](https://github.com/caddijp/frontend/pull/58) chore: update dependencies ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 1
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+
 ## v0.0.12 (2020-08-28)
 
 #### :bug: Type: Bug
