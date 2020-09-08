@@ -8,15 +8,9 @@
       "Type: Feature": ":rocket: Type: Feature"
     }
   },
-  "ignoreChanges": [
-    "**/__fixtures__/**",
-    "**/__tests__/**",
-    "**/*.md"
-  ],
-  "packages": [
-    "packages/*"
-  ],
+  "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.md"],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "0.0.12"
+  "version": "0.0.13"
 }

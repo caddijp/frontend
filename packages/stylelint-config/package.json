@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/stylelint-config",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
