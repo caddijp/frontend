@@ -24,7 +24,6 @@ exports[`FileProperties Upload Basic 1`] = `
     >
       <input
         accept=""
-        directory={null}
         multiple={false}
         onChange={[Function]}
         onClick={[Function]}
@@ -34,7 +33,6 @@ exports[`FileProperties Upload Basic 1`] = `
           }
         }
         type="file"
-        webkitdirectory={null}
       />
       <div
         className="ant-upload-drag-container"
