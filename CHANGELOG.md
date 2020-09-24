@@ -1,3 +1,23 @@
+# v0.0.14 (2020-09-24)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#73](https://github.com/caddijp/frontend/pull/73) fix: react versions ([@9renpoto](https://github.com/9renpoto))
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#84](https://github.com/caddijp/frontend/pull/84) Update upload component ([@sottar](https://github.com/sottar))
+  - [#59](https://github.com/caddijp/frontend/pull/59) chore(deps): pin dependencies ([@renovate[bot]](https://github.com/apps/renovate))
+- `components`, `eslint-config`
+  - [#58](https://github.com/caddijp/frontend/pull/58) chore: update dependencies ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 # v0.0.13 (2020-09-08)
 
 #### :rocket: Type: Feature
