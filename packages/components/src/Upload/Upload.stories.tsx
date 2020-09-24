@@ -1,3 +1,4 @@
+import { InboxOutlined } from '@ant-design/icons';
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { Upload } from '.';
@@ -9,6 +10,11 @@ export default {
   parameters: { actions: { argTypesRegex: '^on.*' } },
 } as Meta<UploadProps>;
 
-const Template: Story<UploadProps> = (args) => <Upload {...args} />;
+const Template: Story<UploadProps> = (args) => (
+  <Upload {...args}>
+    <InboxOutlined />
+    インポートするファイルをここにドラッグ&amp;ドロップ
+  </Upload>
+);
 
 export const Basic = Template.bind({});
