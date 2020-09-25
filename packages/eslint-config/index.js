@@ -12,6 +12,7 @@ module.exports = {
     'no-var': 2,
     'prefer-const': 2,
     'prefer-destructuring': 1,
+    '@typescript-eslint/camelcase': ['warn'],
     'no-console': 1,
   },
   parserOptions: {
