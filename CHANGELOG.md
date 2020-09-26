@@ -1,4 +1,21 @@
-# v0.0.14 (2020-09-24)
+## v0.0.15 (2020-09-26)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#92](https://github.com/caddijp/frontend/pull/92) fix: modal component ([@sottar](https://github.com/sottar))
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#90](https://github.com/caddijp/frontend/pull/90) update button component ([@sottar](https://github.com/sottar))
+  - [#91](https://github.com/caddijp/frontend/pull/91) feat: enhance modal component ([@sottar](https://github.com/sottar))
+
+#### Committers: 1
+
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
+## v0.0.14 (2020-09-24)
 
 #### :bug: Type: Bug
 
@@ -18,7 +35,7 @@
 - Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
 - Sota Ohara ([@sottar](https://github.com/sottar))
 
-# v0.0.13 (2020-09-08)
+## v0.0.13 (2020-09-08)
 
 #### :rocket: Type: Feature
 
