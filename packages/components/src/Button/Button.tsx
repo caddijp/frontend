@@ -2,15 +2,20 @@ import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import React from 'react';
 import styled from 'styled-components';
 
-type ButtonType = 'primary' | 'default' | 'text';
+type ButtonType = 'primary' | 'danger' | 'default' | 'text';
 
-type ButtonProps = {
+type BaseProps = {
   type?: ButtonType;
   isLoading?: boolean;
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
 };
+
+interface ButtonProps extends BaseProps {
+  filled?: boolean;
+  bordered?: boolean;
+}
 
 const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   padding: 4px 16px;
@@ -43,18 +48,34 @@ const BaseButton: React.FC<ButtonProps> = (props) => {
   );
 };
 
-const PrimaryButton = styled(BaseButton)`
-  color: #fff;
-  background: #1890ff;
-  border: 1px solid #1890ff;
+const PrimaryButton = styled(BaseButton)<{
+  filled?: boolean;
+  bordered?: boolean;
+}>`
+  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#1890ff')};
+  background: ${({ filled, bordered }) => (filled || !bordered ? '#1890ff' : '#fff')};
+  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#1890ff' : '#fff')};
 `;
 
-const DefaultButton = styled(BaseButton)`
-  color: #1890ff;
-  border: 1px solid #1890ff;
+const DangerButton = styled(BaseButton)<{
+  filled?: boolean;
+  bordered?: boolean;
+}>`
+  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#eb5757')};
+  background: ${({ filled, bordered }) => (filled || !bordered ? '#eb5757' : '#fff')};
+  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#eb5757' : '#fff')};
 `;
 
-interface TextButtonProps extends ButtonProps {
+const DefaultButton = styled(BaseButton)<{
+  filled?: boolean;
+  bordered?: boolean;
+}>`
+  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#595959')};
+  background: ${({ filled, bordered }) => (filled || !bordered ? '#595959' : '#fff')};
+  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#595959' : '#d9d9d9')};
+`;
+
+interface TextButtonProps extends BaseProps {
   needsBorderLine?: boolean;
   fontSize?: string;
 }
@@ -100,15 +121,17 @@ const TextButton: React.FC<TextButtonProps> = (props) => {
 const Button: React.FC<ButtonProps | TextButtonProps> = (props) => {
   switch (props.type) {
     case 'text':
-      return <TextButton {...props} />;
+      return <TextButton {...(props as TextButtonProps)} />;
     case 'primary':
-      return <PrimaryButton {...props} />;
+      return <PrimaryButton {...(props as ButtonProps)} />;
+    case 'danger':
+      return <DangerButton {...(props as ButtonProps)} />;
     case 'default':
     default:
-      return <DefaultButton {...props} />;
+      return <DefaultButton {...(props as ButtonProps)} />;
   }
 };
 
 export default Button;
 export { Button };
-export type { ButtonProps };
+export type { ButtonProps, TextButtonProps };
