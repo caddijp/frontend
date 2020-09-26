@@ -4,8 +4,9 @@ import ReactModal, { Props as ReactModalProps, Styles as ReactModalStyles } from
 import styled from 'styled-components';
 
 export type ModalProps = ReactModalProps & {
-  title: string;
+  title?: string;
   footer?: React.ReactNode;
+  showCloseIcon?: boolean;
 };
 
 const customStyles: ReactModalStyles = {
@@ -70,17 +71,19 @@ const StyledModalFooter = styled.div`
   box-shadow: inset 0 1px 0 #f0f0f0;
 `;
 
-const Modal: React.FC<ModalProps> = (props) => {
+const Modal: React.FC<ModalProps> = ({ title, footer, showCloseIcon = true, ...props }) => {
   return (
     <StyledModal {...props} style={customStyles}>
       <StyledModalHeader>
-        <StyledModalTitle>{props.title}</StyledModalTitle>
-        <StyledCloseButton onClick={props.onRequestClose}>
-          <CloseOutlined />
-        </StyledCloseButton>
+        {title && <StyledModalTitle>{title}</StyledModalTitle>}
+        {showCloseIcon && (
+          <StyledCloseButton onClick={props.onRequestClose}>
+            <CloseOutlined />
+          </StyledCloseButton>
+        )}
       </StyledModalHeader>
       <StyledModalBody>{props.children}</StyledModalBody>
-      {props.footer && <StyledModalFooter>{props.footer}</StyledModalFooter>}
+      {footer && <StyledModalFooter>{footer}</StyledModalFooter>}
     </StyledModal>
   );
 };
