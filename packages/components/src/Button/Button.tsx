@@ -2,7 +2,7 @@ import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import React from 'react';
 import styled from 'styled-components';
 
-type ButtonType = 'primary' | 'default' | 'text';
+type ButtonType = 'primary' | 'danger' | 'default' | 'text';
 
 type ButtonProps = {
   type?: ButtonType;
@@ -47,6 +47,12 @@ const PrimaryButton = styled(BaseButton)`
   color: #fff;
   background: #1890ff;
   border: 1px solid #1890ff;
+`;
+
+const DangerButton = styled(BaseButton)`
+  color: #fff;
+  background: #eb5757;
+  border: 1px solid #eb5757;
 `;
 
 const DefaultButton = styled(BaseButton)`
@@ -103,6 +109,8 @@ const Button: React.FC<ButtonProps | TextButtonProps> = (props) => {
       return <TextButton {...props} />;
     case 'primary':
       return <PrimaryButton {...props} />;
+    case 'danger':
+      return <DangerButton {...props} />;
     case 'default':
     default:
       return <DefaultButton {...props} />;
