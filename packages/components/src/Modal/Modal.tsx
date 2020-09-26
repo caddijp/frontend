@@ -6,7 +6,6 @@ import styled from 'styled-components';
 export type ModalProps = ReactModalProps & {
   title?: string;
   footer?: React.ReactNode;
-  showCloseIcon?: boolean;
 };
 
 const customStyles: ReactModalStyles = {
@@ -71,17 +70,17 @@ const StyledModalFooter = styled.div`
   box-shadow: inset 0 1px 0 #f0f0f0;
 `;
 
-const Modal: React.FC<ModalProps> = ({ title, footer, showCloseIcon = true, ...props }) => {
+const Modal: React.FC<ModalProps> = ({ title, footer, ...props }) => {
   return (
     <StyledModal {...props} style={customStyles}>
-      <StyledModalHeader>
-        {title && <StyledModalTitle>{title}</StyledModalTitle>}
-        {showCloseIcon && (
+      {title && (
+        <StyledModalHeader>
+          <StyledModalTitle>{title}</StyledModalTitle>
           <StyledCloseButton onClick={props.onRequestClose}>
             <CloseOutlined />
           </StyledCloseButton>
-        )}
-      </StyledModalHeader>
+        </StyledModalHeader>
+      )}
       <StyledModalBody>{props.children}</StyledModalBody>
       {footer && <StyledModalFooter>{footer}</StyledModalFooter>}
     </StyledModal>
