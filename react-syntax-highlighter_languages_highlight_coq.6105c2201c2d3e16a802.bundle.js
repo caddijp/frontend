@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{740:function(module,exports,__webpack_require__){module.exports=__webpack_require__(1)("sKlF")}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_highlight_coq.6105c2201c2d3e16a802.bundle.js.map
