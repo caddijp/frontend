@@ -5,7 +5,7 @@ const path = require('path');
  * https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
  */
 module.exports = {
-  stories: ['../src/**/*.stories.tsx', '../src/**/story.tsx'],
+  stories: ['../src/**/*.stories.tsx'],
   addons: ['@storybook/addon-essentials'],
   // https://github.com/storybookjs/storybook/issues/11146#issuecomment-645341199
   typescript: {
