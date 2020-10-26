@@ -16,6 +16,10 @@ npm install -D @caddijp/stylelint-config stylelint
 }
 ```
 
+## Contributing
+
+PRs accepted.
+
 ## License
 
-[MIT](../../LICENSE)
+[MIT](https://github.com/caddijp/frontend/blob/master/LICENSE) © CADDi Co.,Ltd
