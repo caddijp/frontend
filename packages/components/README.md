@@ -4,20 +4,19 @@
 
 React components made for creating applications
 
-# Installation
+## Install
 
-```sh
-# with npm
-npm install @caddijp/components
+    npm install @caddijp/components
 
-# with yarn
-yarn add @caddijp/components
+## Usage
+
+```typescript
+import { Button } from '@caddijp/components';
+
+export const Hello = ()=> (<Button>Hello</Button>);
+
 ```
-
-# Development
-
-TBD.
 
 ## License
 
-[MIT](../../LICENSE)
+[MIT](https://github.com/caddijp/frontend/blob/master/LICENSE) © CADDi Co.,Ltd
