@@ -5,11 +5,14 @@ interface InputProps {
   width?: string;
   value: string;
   disabled?: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   addonAfter?: string;
   addonBefore?: string;
   placeholder?: string;
   className?: string;
+  customRef?: React.MutableRefObject<null>;
 }
 
 const Wrapper = styled.div`
@@ -61,10 +64,13 @@ const BaseInput: React.FC<InputProps> = (props) => {
       value={props.value}
       disabled={props.disabled}
       onChange={props.onChange}
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
       placeholder={props.placeholder}
       type="text"
       hasAddonBefore={!!props.addonBefore}
       hasAddonAfter={!!props.addonAfter}
+      ref={props.customRef}
     />
   );
 };
