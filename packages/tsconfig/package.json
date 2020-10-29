@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/tsconfig",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "private": true,
   "description": "Shared TypeScript config for CADDi projects",
   "license": "MIT",
