@@ -4,9 +4,7 @@
 
 ## Install
 
-```sh
-npm install -D @caddijp/eslint-config eslint typescript
-```
+    npm install -D @caddijp/eslint-config eslint typescript
 
 ## Usage
 
@@ -16,6 +14,10 @@ npm install -D @caddijp/eslint-config eslint typescript
 }
 ```
 
+## Contributing
+
+PRs accepted.
+
 ## License
 
-[MIT](../../LICENSE)
+[MIT](https://github.com/caddijp/frontend/blob/master/LICENSE) © CADDi Co.,Ltd

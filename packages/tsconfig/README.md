@@ -1,23 +1,25 @@
-# @caddijp/components
+# @caddijp/tsconfig
 
-[![NPM version](https://badge.fury.io/js/%40caddijp%2Fcomponents.svg)](https://badge.fury.io/js/%40caddijp%2Fcomponents)
+[![NPM version](https://badge.fury.io/js/%40caddijp%2Ftsconfig.svg)](https://badge.fury.io/js/%40caddijp%2Ftsconfig)
 
-React components made for creating applications
+Shared TypeScript config for CADDi projects
 
-# Installation
+## Install
 
-```sh
-# with npm
-npm install @caddijp/components
+    npm install @caddijp/tsconfig
 
-# with yarn
-yarn add @caddijp/components
+## Usage
+
+```json
+{
+  "extends": "@caddijp/tsconfig"
+}
 ```
 
-# Development
+## Contributing
 
-TBD.
+PRs accepted.
 
 ## License
 
-[MIT](../../LICENSE)
+[MIT](https://github.com/caddijp/frontend/blob/master/LICENSE) © CADDi Co.,Ltd
