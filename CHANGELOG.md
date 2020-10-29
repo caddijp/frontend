@@ -1,3 +1,13 @@
+## v0.0.17 (2020-10-29)
+
+#### :bug: Type: Bug
+
+- [#132](https://github.com/caddijp/frontend/pull/132) Update yarn.lock ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 1
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+
 ## v0.0.16 (2020-10-29)
 
 #### :rocket: Type: Feature
