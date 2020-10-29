@@ -1,3 +1,17 @@
+## v0.0.16 (2020-10-29)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#130](https://github.com/caddijp/frontend/pull/130) enhance button component ([@sottar](https://github.com/sottar))
+- `components`, `tsconfig`
+  - [#3](https://github.com/caddijp/frontend/pull/3) tsconfig base ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.15 (2020-09-26)
 
 #### :bug: Type: Bug
