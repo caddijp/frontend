@@ -1,4 +1,4 @@
-import { notification as antdNotification } from 'antd';
+import antdNotification from 'antd/lib/notification';
 import React from 'react';
 
 type NotificationType = 'success' | 'info' | 'warning' | 'error' | 'default';
