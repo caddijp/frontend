@@ -1,3 +1,15 @@
+## v0.0.18 (2020-11-09)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#142](https://github.com/caddijp/frontend/pull/142) feat: add notifiaction component ([@sottar](https://github.com/sottar))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+
 ## v0.0.17 (2020-10-29)
 
 #### :bug: Type: Bug
