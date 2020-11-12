@@ -31,16 +31,10 @@ const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   }
 `;
 
-const BaseButton: FC<Omit<ButtonProps, 'type'>> = ({
-  disabled,
-  onClick,
-  children,
-  isLoading,
-  ...props
-}) => (
-  <BaseWrapper onClick={disabled ? void 0 : onClick} disabled={disabled} {...props}>
+const BaseButton: FC<Omit<ButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+  <BaseWrapper onClick={props.disabled ? void 0 : onClick} {...props}>
     {children}
-    {isLoading && <LoadingOutlined />}
+    {props.isLoading && <LoadingOutlined />}
   </BaseWrapper>
 );
 
@@ -101,13 +95,8 @@ const StyledTextButton = styled.button<{
   }
 `;
 
-const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({
-  disabled,
-  onClick,
-  children,
-  ...props
-}) => (
-  <StyledTextButton onClick={disabled ? void 0 : onClick} disabled={disabled} {...props}>
+const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+  <StyledTextButton onClick={props.disabled ? void 0 : onClick} {...props}>
     {children}
   </StyledTextButton>
 );
