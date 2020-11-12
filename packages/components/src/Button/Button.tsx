@@ -7,9 +7,7 @@ type ButtonType = 'primary' | 'danger' | 'default' | 'text';
 type BaseProps = {
   type?: ButtonType;
   isLoading?: boolean;
-  disabled?: boolean;
-  className?: string;
-} & Pick<ComponentProps<typeof BaseWrapper>, 'onClick'>;
+} & Pick<ComponentProps<typeof BaseWrapper>, 'onClick' | 'disabled' | 'className'>;
 
 interface ButtonProps extends BaseProps {
   filled?: boolean;
@@ -40,7 +38,7 @@ const BaseButton: FC<Omit<ButtonProps, 'type'>> = ({
   isLoading,
   ...props
 }) => (
-  <BaseWrapper onClick={disabled ? void 0 : onClick} {...props}>
+  <BaseWrapper onClick={disabled ? void 0 : onClick} disabled={disabled} {...props}>
     {children}
     {isLoading && <LoadingOutlined />}
   </BaseWrapper>
@@ -109,7 +107,7 @@ const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({
   children,
   ...props
 }) => (
-  <StyledTextButton onClick={disabled ? void 0 : onClick} {...props}>
+  <StyledTextButton onClick={disabled ? void 0 : onClick} disabled={disabled} {...props}>
     {children}
   </StyledTextButton>
 );

@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "repository": "ssh://git@github.com/caddijp/frontend.git",
-  "author": "Caddi Co.,Ltd",
+  "author": "CADDi Co.,Ltd",
   "scripts": {
     "build": "lerna run build --include-dependencies",
     "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
