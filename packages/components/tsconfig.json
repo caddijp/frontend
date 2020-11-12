@@ -1,7 +1,6 @@
 {
   "extends": "@caddijp/tsconfig",
   "compilerOptions": {
-    "target": "es6",
     "module": "commonjs",
     "lib": ["es2018", "dom"],
     "jsx": "react"

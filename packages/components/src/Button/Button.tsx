@@ -1,5 +1,5 @@
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
-import React from 'react';
+import React, { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
 
 type ButtonType = 'primary' | 'danger' | 'default' | 'text';
@@ -7,10 +7,7 @@ type ButtonType = 'primary' | 'danger' | 'default' | 'text';
 type BaseProps = {
   type?: ButtonType;
   isLoading?: boolean;
-  onClick?: () => void;
-  disabled?: boolean;
-  className?: string;
-};
+} & Pick<ComponentProps<typeof BaseWrapper>, 'onClick' | 'disabled' | 'className'>;
 
 interface ButtonProps extends BaseProps {
   filled?: boolean;
@@ -34,19 +31,12 @@ const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   }
 `;
 
-const BaseButton: React.FC<ButtonProps> = (props) => {
-  return (
-    <BaseWrapper
-      onClick={props.disabled ? void 0 : props.onClick}
-      className={props.className}
-      disabled={props.disabled}
-      isLoading={props.isLoading}
-    >
-      {props.children}
-      {props.isLoading && <LoadingOutlined />}
-    </BaseWrapper>
-  );
-};
+const BaseButton: FC<Omit<ButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+  <BaseWrapper onClick={props.disabled ? void 0 : onClick} {...props}>
+    {children}
+    {props.isLoading && <LoadingOutlined />}
+  </BaseWrapper>
+);
 
 const PrimaryButton = styled(BaseButton)<{
   filled?: boolean;
@@ -104,31 +94,24 @@ const StyledTextButton = styled.button<{
     cursor: not-allowed;
   }
 `;
-const TextButton: React.FC<TextButtonProps> = (props) => {
-  return (
-    <StyledTextButton
-      onClick={props.disabled ? void 0 : props.onClick}
-      className={props.className}
-      disabled={props.disabled}
-      needsBorderLine={props.needsBorderLine}
-      fontSize={props.fontSize}
-    >
-      {props.children}
-    </StyledTextButton>
-  );
-};
 
-const Button: React.FC<ButtonProps | TextButtonProps> = (props) => {
-  switch (props.type) {
+const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+  <StyledTextButton onClick={props.disabled ? void 0 : onClick} {...props}>
+    {children}
+  </StyledTextButton>
+);
+
+const Button: FC<ButtonProps | TextButtonProps> = ({ type, ...props }) => {
+  switch (type) {
     case 'text':
-      return <TextButton {...(props as TextButtonProps)} />;
+      return <TextButton {...props} />;
     case 'primary':
-      return <PrimaryButton {...(props as ButtonProps)} />;
+      return <PrimaryButton {...props} />;
     case 'danger':
-      return <DangerButton {...(props as ButtonProps)} />;
+      return <DangerButton {...props} />;
     case 'default':
     default:
-      return <DefaultButton {...(props as ButtonProps)} />;
+      return <DefaultButton {...props} />;
   }
 };
 
