@@ -10,7 +10,7 @@
     "build": "run-s clean build:*",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "build:lib": "tsc -p tsconfig.build.json",
-    "clean": "rimraf lib esm",
+    "clean": "rimraf lib esm coverage",
     "prepublishOnly": "yarn build",
     "start-storybook": "start-storybook -c .storybook",
     "test": "jest"
