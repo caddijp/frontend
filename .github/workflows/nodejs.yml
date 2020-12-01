@@ -20,8 +20,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn lint
-          # npx lerna run test -- --ci --coverage
-          yarn workspace @caddijp/components test --coverage
+          npx lerna run test -- --ci --coverage
         env:
           CI: true
       - name: Coveralls
@@ -30,6 +29,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           flag-name: components
           base-path: packages/components
+          path-to-lcov: packages/components/covearge/lcov.info
           parallel: true
   finish:
     needs: build
