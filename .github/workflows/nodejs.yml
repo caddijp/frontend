@@ -20,7 +20,8 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn lint
-          npx lerna run test -- --ci --coverage
+          # npx lerna run test -- --ci --coverage
+          yarn workspace @caddijp/components test --coverage
         env:
           CI: true
       - name: Coveralls
