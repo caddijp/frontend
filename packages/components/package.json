@@ -26,8 +26,8 @@
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
-    "@babel/core": "7.12.9",
-    "@babel/preset-react": "7.12.7",
+    "@babel/core": "7.12.10",
+    "@babel/preset-react": "7.12.10",
     "@babel/preset-typescript": "7.12.7",
     "@storybook/addon-essentials": "6.0.28",
     "@storybook/addon-storyshots": "6.0.28",
