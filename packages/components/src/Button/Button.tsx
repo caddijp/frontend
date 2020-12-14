@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 type ButtonType = 'primary' | 'danger' | 'default' | 'text';
 
-type BaseProps = {
+interface BaseProps extends Omit<ComponentProps<typeof BaseWrapper>, 'type'> {
   type?: ButtonType;
   isLoading?: boolean;
-} & Pick<ComponentProps<typeof BaseWrapper>, 'onClick' | 'disabled' | 'className'>;
+}
 
 interface ButtonProps extends BaseProps {
   filled?: boolean;
