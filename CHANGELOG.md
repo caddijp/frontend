@@ -1,3 +1,14 @@
+## v0.1.1 (2020-12-14)
+
+#### :bug: Type: Bug
+
+- `components`
+  - [#183](https://github.com/caddijp/frontend/pull/183) fix(packages/components): button props ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 1
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+
 ## v0.1.0 (2020-12-14)
 
 #### :rocket: Type: Feature
