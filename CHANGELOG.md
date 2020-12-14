@@ -1,3 +1,15 @@
+## v0.1.0 (2020-12-14)
+
+#### :rocket: Type: Feature
+
+- `components`, `tsconfig`
+  - [#147](https://github.com/caddijp/frontend/pull/147) refactor(packages/components): use native onClick handlers ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Tatsushi Kiryu ([@tkiryu](https://github.com/tkiryu))
+
 ## v0.0.18 (2020-11-09)
 
 #### :rocket: Type: Feature
