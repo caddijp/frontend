@@ -1,4 +1,4 @@
-## Unreleased (2020-12-14)
+## v0.1.0 (2020-12-14)
 
 #### :rocket: Type: Feature
 
