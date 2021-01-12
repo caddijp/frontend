@@ -1,0 +1,15 @@
+name: compressed-size
+
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: compressed-size-action
+        uses: preactjs/compressed-size-action@2.1.0
+        with:
+          repo-token: '${{ secrets.github_token }}'
+          pattern: './packages/components/esm/**/*.js'
+          exclude: '{**/*.map,**/node_modules/**}'
