@@ -1,19 +1,8 @@
-import React from 'react';
+import { $40a9ff, $bfbfbf, $d9d9d9, whiteSmoke } from '@caddijp/colors';
+import { ComponentProps } from 'react';
 import styled from 'styled-components';
 
-export type TextAreaProps = {
-  className?: string;
-  defaultValue?: string;
-  value?: string;
-  placeholder?: string;
-  rows?: number;
-  disabled?: boolean;
-  readOnly?: boolean;
-  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
-  onBlur?: React.ChangeEventHandler<HTMLTextAreaElement>;
-};
-
-const TextAreaComponent = styled.textarea`
+export const TextArea = styled.textarea`
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
@@ -27,21 +16,21 @@ const TextAreaComponent = styled.textarea`
   color: rgba(0, 0, 0, 0.65);
   vertical-align: bottom;
   resize: vertical;
-  border: 1px solid #d9d9d9;
+  border: 1px solid ${$d9d9d9};
   border-radius: 2px;
   font-feature-settings: 'tnum';
 
   &::placeholder {
-    color: #bfbfbf;
+    color: ${$bfbfbf};
   }
 
   &:hover {
-    border-color: #40a9ff;
+    border-color: ${$40a9ff};
     border-right-width: 1px;
   }
 
   &:focus {
-    border-color: #40a9ff;
+    border-color: ${$40a9ff};
     border-right-width: 1px;
     outline: 0;
     box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
@@ -50,17 +39,14 @@ const TextAreaComponent = styled.textarea`
   &[disabled] {
     color: rgba(0, 0, 0, 0.25);
     cursor: not-allowed;
-    background-color: #f5f5f5;
+    background-color: ${whiteSmoke};
     opacity: 1;
     &:hover {
-      border-color: #d9d9d9;
+      border-color: ${$d9d9d9};
     }
   }
 `;
 
-const TextArea: React.FC<TextAreaProps> = (props) => {
-  return <TextAreaComponent {...props} />;
-};
+export type TextAreaProps = ComponentProps<typeof TextArea>;
 
 export default TextArea;
-export { TextArea };

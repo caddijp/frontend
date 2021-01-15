@@ -1,19 +1,6 @@
-import React from 'react';
+import { $d9d9d9, white } from '@caddijp/colors';
+import React, { ComponentProps } from 'react';
 import styled from 'styled-components';
-
-interface InputProps {
-  width?: string;
-  value: string;
-  disabled?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  addonAfter?: string;
-  addonBefore?: string;
-  placeholder?: string;
-  className?: string;
-  customRef?: React.MutableRefObject<null>;
-}
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,15 +10,15 @@ const Wrapper = styled.div`
     font-size: 14px;
     text-align: center;
     background: #fafafa;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid ${$d9d9d9};
+    border-bottom: 1px solid ${$d9d9d9};
     &.before {
-      border-left: 1px solid #d9d9d9;
+      border-left: 1px solid ${$d9d9d9};
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
     }
     &.after {
-      border-right: 1px solid #d9d9d9;
+      border-right: 1px solid ${$d9d9d9};
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
     }
@@ -45,8 +32,8 @@ const StyledInput = styled.input<{
 }>`
   width: ${(props) => props.width ?? '100%'};
   height: 32px;
-  background: #fff;
-  border: 1px solid #d9d9d9;
+  background: ${white};
+  border: 1px solid ${$d9d9d9};
   border-top-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   border-top-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
   border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
@@ -57,23 +44,31 @@ const StyledInput = styled.input<{
   }
 `;
 
-const BaseInput: React.FC<InputProps> = (props) => {
-  return (
-    <StyledInput
-      width={props.width}
-      value={props.value}
-      disabled={props.disabled}
-      onChange={props.onChange}
-      onFocus={props.onFocus}
-      onBlur={props.onBlur}
-      placeholder={props.placeholder}
-      type="text"
-      hasAddonBefore={!!props.addonBefore}
-      hasAddonAfter={!!props.addonAfter}
-      ref={props.customRef}
-    />
-  );
-};
+interface InputProps
+  extends Pick<
+    ComponentProps<typeof StyledInput>,
+    'width' | 'value' | 'disabled' | 'onChange' | 'onFocus' | 'onBlur' | 'placeholder' | 'className'
+  > {
+  addonAfter?: string;
+  addonBefore?: string;
+  customRef?: React.MutableRefObject<null>;
+}
+
+const BaseInput: React.FC<InputProps> = (props) => (
+  <StyledInput
+    width={props.width}
+    value={props.value}
+    disabled={props.disabled}
+    onChange={props.onChange}
+    onFocus={props.onFocus}
+    onBlur={props.onBlur}
+    placeholder={props.placeholder}
+    type="text"
+    hasAddonBefore={!!props.addonBefore}
+    hasAddonAfter={!!props.addonAfter}
+    ref={props.customRef}
+  />
+);
 
 const Input: React.FC<InputProps> = (props) => {
   if (!props.addonAfter && !props.addonBefore) {

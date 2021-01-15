@@ -1,0 +1,11 @@
+{
+  "name": "@caddijp/colors",
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "lib/colors.js",
+  "module": "lib/colors.module.js",
+  "scripts": {
+    "build": "microbundle build --tsconfig tsconfig.json"
+  },
+  "types": "lib/index.d.ts"
+}

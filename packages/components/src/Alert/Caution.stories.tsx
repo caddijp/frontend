@@ -1,17 +1,14 @@
 import { Meta, Story } from '@storybook/react';
-import React, { PropsWithChildren } from 'react';
-import type { CautionProps } from '.';
+import React, { ComponentProps } from 'react';
 import { Caution } from '.';
-
-type _CautionProps = PropsWithChildren<CautionProps>;
 
 export default {
   title: 'Alert/Caution',
   component: Caution,
   parameters: { actions: { argTypesRegex: '^on.*' } },
-} as Meta<_CautionProps>;
+} as Meta;
 
-const Template: Story<_CautionProps> = (args) => <Caution {...args} />;
+const Template: Story<ComponentProps<typeof Caution>> = (args) => <Caution {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
