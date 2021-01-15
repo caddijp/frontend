@@ -1,14 +1,8 @@
 import { CloseCircleFilled, ExclamationCircleFilled, InfoCircleFilled } from '@ant-design/icons';
-import React from 'react';
+import React, { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
 
 type AlertType = 'error' | 'warning' | 'info';
-
-interface AlertProps {
-  type?: AlertType;
-  message: string | JSX.Element;
-  className?: string;
-}
 
 const Wrapper = styled.div<{ type?: AlertType }>`
   width: 100%;
@@ -28,17 +22,18 @@ const Wrapper = styled.div<{ type?: AlertType }>`
   }
 `;
 
-const Alert: React.FC<AlertProps> = ({ type, message, className }) => {
-  return (
-    <Wrapper type={type} className={className}>
-      {(type === 'error' || !type) && <CloseCircleFilled style={{ color: '#ff4d4f' }} />}
-      {type === 'warning' && <ExclamationCircleFilled style={{ color: '#faad14' }} />}
-      {type === 'info' && <InfoCircleFilled style={{ color: '#1890ff' }} />}
-      <span className="message">{message}</span>
-    </Wrapper>
-  );
-};
+export interface AlertProps extends Pick<ComponentProps<typeof Wrapper>, 'type' | 'className'> {
+  message: string | JSX.Element;
+}
+
+const Alert: FC<AlertProps> = ({ type, message, className }) => (
+  <Wrapper type={type} className={className}>
+    {(type === 'error' || !type) && <CloseCircleFilled style={{ color: '#ff4d4f' }} />}
+    {type === 'warning' && <ExclamationCircleFilled style={{ color: '#faad14' }} />}
+    {type === 'info' && <InfoCircleFilled style={{ color: '#1890ff' }} />}
+    <span className="message">{message}</span>
+  </Wrapper>
+);
 
 export default Alert;
 export { Alert };
-export type { AlertProps };

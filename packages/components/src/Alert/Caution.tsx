@@ -1,9 +1,5 @@
-import React from 'react';
+import React, { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
-
-type CautionProps = {
-  className?: string;
-};
 
 const StyledCaution = styled.p`
   margin: 0 auto;
@@ -11,17 +7,14 @@ const StyledCaution = styled.p`
   color: #8a8a8a;
 `;
 
-const Caution: React.FC<CautionProps> = ({ children, className }) => {
-  return (
-    <StyledCaution className={className}>
-      <span role="img" aria-label="!">
-        💡
-      </span>
-      {children}
-    </StyledCaution>
-  );
-};
+const Caution: FC<ComponentProps<typeof StyledCaution>> = ({ children, className }) => (
+  <StyledCaution className={className}>
+    <span role="img" aria-label="!">
+      💡
+    </span>
+    {children}
+  </StyledCaution>
+);
 
 export default Caution;
 export { Caution };
-export type { CautionProps };

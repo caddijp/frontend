@@ -1,12 +1,13 @@
 import { CloseOutlined } from '@ant-design/icons';
+import { $f0f0f0, white } from '@caddijp/colors';
 import React from 'react';
 import ReactModal, { Props as ReactModalProps, Styles as ReactModalStyles } from 'react-modal';
 import styled from 'styled-components';
 
-export type ModalProps = ReactModalProps & {
+export interface ModalProps extends ReactModalProps {
   title?: string;
   footer?: React.ReactNode;
-};
+}
 
 const customStyles: ReactModalStyles = {
   /* stylelint-disable selector-type-no-unknown */
@@ -22,7 +23,7 @@ const StyledModal = styled(ReactModal)`
   left: 50%;
   width: 568px;
   max-height: 80vh;
-  background: #fff;
+  background: ${white};
   border-radius: 2px;
   box-shadow: 0 9px 28px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.12),
     0 6px 16px rgba(0, 0, 0, 0.08);
@@ -35,8 +36,8 @@ const StyledModalHeader = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 55px;
-  background: #fff;
-  box-shadow: inset 0 -1px 0 #f0f0f0;
+  background: ${white};
+  box-shadow: inset 0 -1px 0 ${$f0f0f0};
 `;
 
 const StyledModalTitle = styled.div`
@@ -59,33 +60,31 @@ const StyledModalBody = styled.div`
   max-height: calc(80vh - 100px);
   padding: 24px;
   overflow: scroll;
-  background-color: #fff;
+  background-color: ${white};
 `;
 
 const StyledModalFooter = styled.div`
   width: 100%;
   max-height: calc(80vh - 55px);
-  background-color: #fff;
+  background-color: ${white};
   border-radius: 2px;
-  box-shadow: inset 0 1px 0 #f0f0f0;
+  box-shadow: inset 0 1px 0 ${$f0f0f0};
 `;
 
-const Modal: React.FC<ModalProps> = ({ title, footer, ...props }) => {
-  return (
-    <StyledModal {...props} style={customStyles}>
-      {title && (
-        <StyledModalHeader>
-          <StyledModalTitle>{title}</StyledModalTitle>
-          <StyledCloseButton onClick={props.onRequestClose}>
-            <CloseOutlined />
-          </StyledCloseButton>
-        </StyledModalHeader>
-      )}
-      <StyledModalBody>{props.children}</StyledModalBody>
-      {footer && <StyledModalFooter>{footer}</StyledModalFooter>}
-    </StyledModal>
-  );
-};
+const Modal: React.FC<ModalProps> = ({ title, footer, ...props }) => (
+  <StyledModal {...props} style={customStyles}>
+    {title && (
+      <StyledModalHeader>
+        <StyledModalTitle>{title}</StyledModalTitle>
+        <StyledCloseButton onClick={props.onRequestClose}>
+          <CloseOutlined />
+        </StyledCloseButton>
+      </StyledModalHeader>
+    )}
+    <StyledModalBody>{props.children}</StyledModalBody>
+    {footer && <StyledModalFooter>{footer}</StyledModalFooter>}
+  </StyledModal>
+);
 
 export default Modal;
 export { Modal };

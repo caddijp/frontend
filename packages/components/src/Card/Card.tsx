@@ -1,27 +1,16 @@
-import React from 'react';
+import { white } from '@caddijp/colors';
 import styled from 'styled-components';
 
-type CardProps = {
+export type CardProps = {
   padding?: string;
   width?: string;
-  className?: string;
 };
 
-const Wrapper = styled.div<CardProps>`
+export const Card = styled.div<CardProps>`
   width: ${(props) => props.width ?? '550px'};
   padding: ${(props) => props.padding ?? '30px'};
   margin: 0 auto;
-  background: #fff;
+  background: ${white};
 `;
 
-const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
-  return (
-    <Wrapper className={className} {...rest}>
-      {children}
-    </Wrapper>
-  );
-};
-
 export default Card;
-export { Card };
-export type { CardProps };

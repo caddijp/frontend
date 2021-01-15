@@ -1,0 +1,11 @@
+export const $1890ff = '#1890ff';
+export const $3582e5 = '#3582e5';
+export const $40a9ff = '#40a9ff';
+export const $595959 = '#595959';
+export const $bfbfbf = '#bfbfbf';
+export const $d9d9d9 = '#d9d9d9';
+export const $eb5757 = '#eb5757';
+export const $f0f0f0 = '#f0f0f0';
+export const $fafafa = '#fafafa';
+export const white = '#fff';
+export const whiteSmoke = '#f5f5f5';
