@@ -17,6 +17,7 @@ jobs:
       - name: npm install, build
         run: |
           yarn install --frozen-lockfile
+          yarn build
           yarn workspace @caddijp/components build-storybook
 
       - name: Deploy
