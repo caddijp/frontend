@@ -1,4 +1,4 @@
-import { $d9d9d9, white } from '@caddijp/colors';
+import { $bgGrayLight1, $borderGrayLight2, $white } from '@caddijp/colors';
 import React, { ComponentProps } from 'react';
 import styled from 'styled-components';
 
@@ -9,16 +9,16 @@ const Wrapper = styled.div`
     padding: 5px 12px;
     font-size: 14px;
     text-align: center;
-    background: #fafafa;
-    border-top: 1px solid ${$d9d9d9};
-    border-bottom: 1px solid ${$d9d9d9};
+    background: ${$bgGrayLight1};
+    border-top: 1px solid ${$borderGrayLight2};
+    border-bottom: 1px solid ${$borderGrayLight2};
     &.before {
-      border-left: 1px solid ${$d9d9d9};
+      border-left: 1px solid ${$borderGrayLight2};
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
     }
     &.after {
-      border-right: 1px solid ${$d9d9d9};
+      border-right: 1px solid ${$borderGrayLight2};
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
     }
@@ -32,15 +32,15 @@ const StyledInput = styled.input<{
 }>`
   width: ${(props) => props.width ?? '100%'};
   height: 32px;
-  background: ${white};
-  border: 1px solid ${$d9d9d9};
+  background: ${$white};
+  border: 1px solid ${$borderGrayLight2};
   border-top-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   border-top-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
   border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
   border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
   &:disabled {
     cursor: not-allowed;
-    background: #fafafa;
+    background: ${$bgGrayLight1};
   }
 `;
 
