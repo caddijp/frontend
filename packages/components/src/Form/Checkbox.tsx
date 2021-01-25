@@ -1,4 +1,4 @@
-import { $1890ff, $d9d9d9, white, whiteSmoke } from '@caddijp/colors';
+import { $bgBlue, $borderBlue, $borderGrayLight2, $white, $whiteSmoke } from '@caddijp/colors';
 import React, { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
 
@@ -21,14 +21,14 @@ const StyledCheckbox = styled.input`
   margin-right: 8px;
   cursor: pointer;
   border-collapse: separate;
-  background-color: ${white};
-  border: 1px solid ${$d9d9d9};
+  background-color: ${$white};
+  border: 1px solid ${$borderGrayLight2};
   border-radius: 2px;
   transition: all 0.3s;
   appearance: none;
   &:checked {
-    background-color: ${$1890ff};
-    border-color: ${$1890ff};
+    background-color: ${$bgBlue};
+    border-color: ${$borderBlue};
     &::after {
       position: absolute;
       top: 50%;
@@ -37,7 +37,7 @@ const StyledCheckbox = styled.input`
       width: 5.71428571px;
       height: 9.14285714px;
       content: ' ';
-      border: 2px solid ${white};
+      border: 2px solid ${$white};
       border-top: 0;
       border-left: 0;
       opacity: 1;
@@ -49,8 +49,8 @@ const StyledCheckbox = styled.input`
     outline: 0;
   }
   &:disabled {
-    background-color: ${whiteSmoke};
-    border-color: #d9d9d9;
+    background-color: ${$whiteSmoke};
+    border-color: ${$borderGrayLight2};
     &:checked {
       &::after {
         border: 2px solid rgba(0, 0, 0, 0.25);

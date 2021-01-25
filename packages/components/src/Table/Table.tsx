@@ -1,5 +1,5 @@
-import { $f0f0f0, $fafafa } from '@caddijp/colors';
-import React, { ComponentProps } from 'react';
+import { $grayLight1, $grayLight2 } from '@caddijp/colors';
+import React, { ComponentProps, FC } from 'react';
 import styled from 'styled-components';
 
 type ColumnsType = { key: string; title: string }[];
@@ -20,8 +20,8 @@ const StyledTableHead = styled.thead`
     color: rgba(0, 0, 0, 0.85);
     text-align: left;
     overflow-wrap: break-word;
-    background: ${$fafafa};
-    border-bottom: 1px solid ${$f0f0f0};
+    background: ${$grayLight1};
+    border-bottom: 1px solid ${$grayLight2};
     transition: background 0.3s ease;
   }
 `;
@@ -32,19 +32,18 @@ const StyledTableBody = styled.tbody`
       position: relative;
       padding: 16px;
       overflow-wrap: break-word;
-      border-bottom: 1px solid ${$f0f0f0};
+      border-bottom: 1px solid ${$grayLight2};
       transition: background 0.3s;
     }
 
     &:hover {
-      background: ${$fafafa};
+      background: ${$grayLight1};
     }
   }
 `;
 
-const renderHeader = (columns: ColumnsType): JSX.Element[] => {
-  return columns.map((column) => <th key={column.key}>{column.title}</th>);
-};
+const renderHeader = (columns: ColumnsType): JSX.Element[] =>
+  columns.map((column) => <th key={column.key}>{column.title}</th>);
 
 const renderBody = (data: DataType, columns: ColumnsType): JSX.Element[] =>
   data.map((data, index) => (
@@ -60,7 +59,7 @@ export interface TableProps extends Pick<ComponentProps<typeof StyledTable>, 'cl
   data: DataType;
 }
 
-export const Table: React.FC<TableProps> = (props) => (
+export const Table: FC<TableProps> = (props) => (
   <StyledTable className={props.className}>
     <StyledTableHead>
       <tr>{renderHeader(props.columns)}</tr>

@@ -1,4 +1,4 @@
-import { white } from '@caddijp/colors';
+import { $white } from '@caddijp/colors';
 import styled from 'styled-components';
 
 export type CardProps = {
@@ -10,7 +10,7 @@ export const Card = styled.div<CardProps>`
   width: ${(props) => props.width ?? '550px'};
   padding: ${(props) => props.padding ?? '30px'};
   margin: 0 auto;
-  background: ${white};
+  background: ${$white};
 `;
 
 export default Card;
