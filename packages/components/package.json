@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/components",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "CADDi ui components built with React.",
   "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
