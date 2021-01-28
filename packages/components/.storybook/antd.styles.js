@@ -38,7 +38,7 @@ import 'antd/lib/style/index.css';
 // import 'antd/lib/menu/style/index.css';
 // import 'antd/lib/message/style/index.css';
 // import 'antd/lib/modal/style/index.css';
-// import 'antd/lib/notification/style/index.css';
+import 'antd/lib/notification/style/index.css';
 // import 'antd/lib/page-header/style/index.css';
 import 'antd/lib/pagination/style/index.css';
 // import 'antd/lib/popover/style/index.css';

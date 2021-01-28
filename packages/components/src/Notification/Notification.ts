@@ -6,13 +6,15 @@ type NotificationProps = {
   type: NotificationType;
   message: React.ReactNode;
   description?: React.ReactNode;
+  duration?: number;
 };
 
 const notification = {
-  open: (props: NotificationProps) => {
+  open: (props: NotificationProps): void => {
     const attr = {
       message: props.message,
       description: props.description,
+      duration: props.duration,
     };
     switch (props.type) {
       case 'success':
