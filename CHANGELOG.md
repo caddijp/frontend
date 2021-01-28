@@ -1,3 +1,17 @@
+## v0.2.0 (2021-01-28)
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#202](https://github.com/caddijp/frontend/pull/202) feat(packages/components): add duration prop to Notification ([@tkiryu](https://github.com/tkiryu))
+- Other
+  - [#188](https://github.com/caddijp/frontend/pull/188) chore(deps): update dependency eslint-plugin-react to v7.22.0 ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Tatsushi Kiryu ([@tkiryu](https://github.com/tkiryu))
+
 ## v0.1.1 (2020-12-14)
 
 #### :bug: Type: Bug
