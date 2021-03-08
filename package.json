@@ -13,6 +13,7 @@
     "lint:pkg": "lerna run lint --parallel",
     "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
     "lint:style": "stylelint '**/*.ts{,x}' -s css-in-js",
+    "prepare": "husky install",
     "prepublishOnly": "yarn lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
     "test": "lerna run test --parallel"
@@ -40,7 +41,8 @@
   },
   "resolutions": {
     "@types/react": "17.0.3",
-    "@types/react-dom": "17.0.1"
+    "@types/react-dom": "17.0.1",
+    "eslint": "7.21.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
