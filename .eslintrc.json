@@ -1,5 +1,5 @@
 {
-  "extends": ["@caddijp/eslint-config", "prettier/react"],
+  "extends": ["@caddijp/eslint-config"],
   "plugins": ["react", "react-hooks"],
   "parserOptions": {
     "ecmaFeatures": {
