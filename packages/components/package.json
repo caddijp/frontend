@@ -48,6 +48,16 @@
     "setupFilesAfterEnv": [
       "jest-styled-components"
     ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      [
+        "lcov",
+        {
+          "projectRoot": "../../"
+        }
+      ],
+      "text-summary"
+    ],
     "moduleNameMapper": {
       "\\.(scss|css|less|svg)$": "identity-obj-proxy"
     }

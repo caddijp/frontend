@@ -21,7 +21,7 @@ jobs:
         run: |
           npm ci
           npm run lint
-          npx lerna run test -- --ci --coverage
+          npm test
         env:
           CI: true
       - name: Coveralls
