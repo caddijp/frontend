@@ -32,7 +32,6 @@ exports[`FileProperties Alert/Alert Error 1`] = `
   >
     <svg
       aria-hidden="true"
-      className=""
       data-icon="close-circle"
       fill="currentColor"
       focusable="false"
@@ -85,7 +84,6 @@ exports[`FileProperties Alert/Alert Info 1`] = `
   >
     <svg
       aria-hidden="true"
-      className=""
       data-icon="info-circle"
       fill="currentColor"
       focusable="false"
@@ -138,7 +136,6 @@ exports[`FileProperties Alert/Alert Warning 1`] = `
   >
     <svg
       aria-hidden="true"
-      className=""
       data-icon="exclamation-circle"
       fill="currentColor"
       focusable="false"
