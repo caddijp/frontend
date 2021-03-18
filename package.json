@@ -9,8 +9,9 @@
   },
   "scripts": {
     "build": "lerna run build --include-dependencies",
-    "build-storybook": "lerna run build-storybook --scope @caddijp/components",
+    "build-storybook": "npm run --prefix packages/components build-storybook",
     "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
+    "clean": "lerna run clean && lerna clean",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "run-p -l lint:*",
     "lint:es": "eslint . --ext=ts,tsx",
@@ -20,7 +21,7 @@
     "prepare": "husky install",
     "prepublishOnly": "npm rum lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
-    "start-storybook": "lerna run start-storybook --scope @caddijp/components",
+    "start-storybook": "npm run --prefix packages/components start-storybook",
     "test": "lerna run test --parallel"
   },
   "devDependencies": {

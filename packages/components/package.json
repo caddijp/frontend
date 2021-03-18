@@ -27,7 +27,6 @@
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "6.0.28",
     "@storybook/addon-storyshots": "6.0.28",
     "@storybook/react": "6.0.28",
     "@types/react": "16.14.5",
