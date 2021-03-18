@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -16,11 +16,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm i -g npm@7
       - name: npm install, build, and test
         run: |
-          yarn install --frozen-lockfile
-          yarn lint
-          npx lerna run test -- --ci --coverage
+          npm ci
+          npm run lint
+          npm test
         env:
           CI: true
       - name: Coveralls

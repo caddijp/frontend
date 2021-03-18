@@ -5,7 +5,6 @@ import { Button } from '../Button';
 
 export default {
   title: 'Notification',
-  component: Notification,
 };
 
 const Template: Story<NotificationProps> = (args) => (

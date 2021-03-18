@@ -7,6 +7,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.3.4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: npm i -g npm@7
       - name: compressed-size-action
         uses: preactjs/compressed-size-action@2.1.0
         with:

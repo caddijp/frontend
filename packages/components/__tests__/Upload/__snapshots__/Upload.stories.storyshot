@@ -44,7 +44,6 @@ exports[`FileProperties Upload Basic 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="inbox"
             fill="currentColor"
             focusable="false"
