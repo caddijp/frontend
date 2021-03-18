@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "lerna run build --include-dependencies",
+    "build-storybook": "lerna run build-storybook --scope @caddijp/components",
     "bump": "lerna version --no-git-tag-version --no-push && lerna-changelog",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "run-p -l lint:*",
