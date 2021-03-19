@@ -19,7 +19,7 @@
     "lint:prettier": "prettier --check \"{packages,apps}/**/*.{js,ts,tsx}\"",
     "lint:style": "stylelint '**/*.ts{,x}' -s css-in-js",
     "prepare": "husky install",
-    "prepublishOnly": "npm rum lint",
+    "prepublishOnly": "npm run lint",
     "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://registry.npmjs.org/\"'",
     "start-storybook": "npm run --prefix packages/components start-storybook",
     "test": "lerna run test --parallel"
