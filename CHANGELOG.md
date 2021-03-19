@@ -1,3 +1,18 @@
+## v0.2.1 (2021-03-19)
+
+#### :bug: Type: Bug
+
+- [#245](https://github.com/caddijp/frontend/pull/245) fix: typo ([@9renpoto](https://github.com/9renpoto))
+
+#### :rocket: Type: Feature
+
+- `components`
+  - [#244](https://github.com/caddijp/frontend/pull/244) feat: use npm workspace ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 1
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+
 ## v0.2.0 (2021-01-28)
 
 #### :rocket: Type: Feature
