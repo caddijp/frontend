@@ -6,7 +6,7 @@
 
 ## Install
 
-    yarn install
+    npm install
 
 ## Apps / Packages
 
