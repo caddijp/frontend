@@ -1,8 +1,13 @@
 {
   "name": "@caddijp/tsconfig",
   "version": "0.2.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "cache": "~/.npm"
+  },
   "description": "Shared TypeScript config for CADDi projects",
   "license": "MIT",
+  "repository": "git@github.com:caddijp/frontend.git",
   "main": "tsconfig.json",
   "files": [
     "tsconfig.json"
