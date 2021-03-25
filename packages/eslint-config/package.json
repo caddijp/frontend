@@ -1,7 +1,12 @@
 {
   "name": "@caddijp/eslint-config",
   "version": "0.2.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "cache": "~/.npm"
+  },
   "license": "MIT",
+  "repository": "git@github.com:caddijp/frontend.git",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . -c index.js"
