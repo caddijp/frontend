@@ -29,8 +29,8 @@
     "test": "lerna run test --parallel"
   },
   "devDependencies": {
-    "@commitlint/cli": "12.0.1",
-    "@commitlint/config-conventional": "12.0.1",
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
     "@types/jest": "26.0.22",
     "can-npm-publish": "1.3.3",
     "eslint-plugin-react": "7.23.1",
