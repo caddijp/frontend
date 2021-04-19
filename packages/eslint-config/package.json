@@ -15,8 +15,8 @@
     "eslint": "^5.0.0 || ^6.0.0 || ^7.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.1.4"
   }
