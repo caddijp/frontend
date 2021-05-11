@@ -1,0 +1,9 @@
+{
+  "extends": "@caddijp/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["es2018", "dom"],
+    "jsx": "react"
+  },
+  "include": ["src/**/*"]
+}

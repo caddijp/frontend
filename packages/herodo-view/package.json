@@ -1,0 +1,61 @@
+{
+  "name": "@caddijp/herodo-view",
+  "version": "0.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "cache": "~/.npm"
+  },
+  "description": "CADDi ui components built with React.",
+  "license": "MIT",
+  "repository": "git@github.com:caddijp/frontend.git",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "build": "run-s clean build:*",
+    "build-storybook": "build-storybook -c .storybook",
+    "build:esm": "tsc -p tsconfig.esm.build.json",
+    "build:lib": "tsc -p tsconfig.build.json",
+    "clean": "rimraf lib esm coverage",
+    "prepublishOnly": "yarn build",
+    "start-storybook": "start-storybook -c .storybook",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@caddijp/orama-view": "^0.3.13",
+    "antd": "^4.6.2",
+    "react-modal": "^3.11.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-storyshots": "6.2.9",
+    "@storybook/react": "6.2.9",
+    "@types/react": "16.14.6",
+    "@types/react-dom": "16.9.12",
+    "@types/react-modal": "3.12.0",
+    "@types/styled-components": "5.1.9",
+    "babel-loader": "8.2.2",
+    "css-loader": "5.2.4",
+    "identity-obj-proxy": "3.0.0",
+    "jest-styled-components": "7.0.4",
+    "react-test-renderer": "16.14.0",
+    "style-loader": "2.0.0"
+  },
+  "types": "lib/index.d.ts",
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "jest-styled-components"
+    ],
+    "collectCoverage": true,
+    "moduleNameMapper": {
+      "\\.(scss|css|less|svg)$": "identity-obj-proxy"
+    }
+  }
+}
