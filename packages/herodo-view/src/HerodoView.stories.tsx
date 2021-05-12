@@ -4,15 +4,23 @@ import styled from 'styled-components';
 import type { HerodoViewHandler, HerodoViewPin, HerodoViewProps } from './HerodoView';
 import { HerodoView } from './HerodoView';
 
-const EditBtn = styled.button`
+const Container = styled.div`
+  position: relative;
+  height: 90vh;
+  background: #1e2f4b;
+`;
+
+const EditBtn = styled.label`
   position: absolute;
   top: 10px;
   left: 10px;
+  padding: 0 4px;
+  background: #fff;
 `;
 
 const SaveBtn = styled.button`
   position: absolute;
-  top: 30px;
+  top: 50px;
   left: 10px;
 `;
 
@@ -22,8 +30,8 @@ export default {
   parameters: { actions: { argTypesRegex: '^on.*' } },
 } as Meta<HerodoViewProps>;
 
-const Template: Story<HerodoViewProps> = (args) => {
-  const [editabled, setEditabled] = useState(false);
+const Template: Story<HerodoViewProps> = () => {
+  const [editabled, setEditabled] = useState(true);
   const [selectedIndex, setSelectedindex] = useState<number | null>(null);
   const [pins, setPins] = useState<HerodoViewPin[]>([]);
   const viewerRef = useRef<HerodoViewHandler | null>(null);
@@ -32,32 +40,33 @@ const Template: Story<HerodoViewProps> = (args) => {
 
     const a = document.createElement('a');
     a.target = '_brank';
-    a.download = 'viewer.png';
+    a.download = 'HerodoView.png';
     a.href = `data:image/png;base64,${await viewerRef.current.toBase64()}`;
     a.click();
   }, []);
 
   return (
-    <>
+    <Container>
       <HerodoView
         ref={viewerRef}
-        src={args.src}
+        src="/sample.png"
         pins={pins}
         editabled={editabled}
         selectedIndex={selectedIndex}
         onChangePins={setPins}
         onSelectPin={setSelectedindex}
       />
-      <EditBtn onClick={() => setEditabled((e) => !e)}>Edit</EditBtn>
+      <EditBtn>
+        <input
+          type="checkbox"
+          checked={editabled}
+          onChange={(e) => setEditabled(e.target.checked)}
+        />
+        Edit
+      </EditBtn>
       <SaveBtn onClick={savePins}>Save</SaveBtn>
-    </>
+    </Container>
   );
 };
 
 export const Basic = Template.bind({});
-Basic.args = {
-  src: 'https://corp.caddi.jp/assets/img/bnr_seminar_sp.png',
-  editabled: true,
-  pins: [],
-  selectedIndex: null,
-};

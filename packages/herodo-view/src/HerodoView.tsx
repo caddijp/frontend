@@ -490,7 +490,7 @@ const HerodoViewComponent = (props: HerodoViewProps, ref: Ref<HerodoViewHandler>
                   onChange={(pin) =>
                     props.onChangePins?.(props.pins.map((p, index) => (index === i ? pin : p)))
                   }
-                  onSelect={() => props.onSelectPin?.(i === props.selectedIndex ? null : i)}
+                  onSelect={() => props.onSelectPin?.(i)}
                 />
               ))}
           </svg>

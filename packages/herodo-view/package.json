@@ -12,12 +12,12 @@
   "module": "esm/index.js",
   "scripts": {
     "build": "run-s clean build:*",
-    "build-storybook": "build-storybook -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -s public",
     "build:esm": "tsc -p tsconfig.esm.build.json",
     "build:lib": "tsc -p tsconfig.build.json",
     "clean": "rimraf lib esm coverage",
     "prepublishOnly": "yarn build",
-    "start-storybook": "start-storybook -c .storybook",
+    "start-storybook": "start-storybook -c .storybook -s public",
     "test": "jest"
   },
   "peerDependencies": {
