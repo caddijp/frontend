@@ -1,19 +1,29 @@
-# @caddijp/components
+# @caddijp/herodo-view
 
-[![NPM version](https://badge.fury.io/js/%40caddijp%2Fcomponents.svg)](https://badge.fury.io/js/%40caddijp%2Fcomponents)
+[![NPM version](https://badge.fury.io/js/%40caddijp%2Fherodo-view.svg)](https://badge.fury.io/js/%40caddijp%2Fherodo-view)
 
-React components made for creating applications
+Orama-view wrapper for Herodo/SPP
 
 ## Install
 
-    npm install @caddijp/components
+    npm install @caddijp/herodo-view
 
 ## Usage
 
 ```typescript
-import { Button } from '@caddijp/components';
+import { HerodoView } from '@caddijp/herodo-view';
 
-export const Hello = ()=> (<Button>Hello</Button>);
+export const Viewer = () => (
+    <HerodoView
+        ref={viewerRef}
+        src="/sample.png"
+        pins={pins}
+        editabled={editabled}
+        selectedIndex={selectedIndex}
+        onChangePins={setPins}
+        onSelectPin={setSelectedindex}
+    />
+);
 
 ```
 

@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
-import type { HerodoViewHandler, HerodoViewPin, HerodoViewProps } from './HerodoView';
-import { HerodoView } from './HerodoView';
+import type { HerodoViewHandler, HerodoViewPin, HerodoViewProps } from '.';
+import { HerodoView } from '.';
 
 const Container = styled.div`
   position: relative;
