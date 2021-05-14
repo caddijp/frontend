@@ -50,6 +50,9 @@
     "transform": {
       "^.+\\.(t|j)sx?$": "babel-jest"
     },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@caddijp/orama-view)"
+    ],
     "setupFilesAfterEnv": [
       "jest-styled-components"
     ],

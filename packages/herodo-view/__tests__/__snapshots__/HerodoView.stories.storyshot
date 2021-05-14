@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties HerodoView Basic 1`] = `
+.c1 {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.c2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.c3 {
+  height: 100%;
+  text-align: center;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.c0 {
+  position: relative;
+  height: 90vh;
+  background: #1e2f4b;
+}
+
+.c4 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0 4px;
+  background: #fff;
+}
+
+.c5 {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <canvas
+      height={1}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onWheel={[Function]}
+      style={
+        Object {
+          "border": "black",
+          "borderWidth": 1,
+          "color": "lightblue",
+        }
+      }
+      width={1}
+    />
+    <div
+      className="c2"
+      onContextMenu={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onWheel={[Function]}
+    >
+      <div
+        className="c3"
+        style={
+          Object {
+            "transform": "translate(0px, 0px) scale(1)",
+          }
+        }
+      >
+        <svg
+          fill="none"
+          height={1}
+          onMouseDown={[Function]}
+          viewBox="0 0 1 1"
+          width={1}
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </div>
+    </div>
+  </div>
+  <label
+    className="c4"
+  >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Edit
+  </label>
+  <button
+    className="c5"
+    onClick={[Function]}
+  >
+    Save
+  </button>
+</div>
+`;
