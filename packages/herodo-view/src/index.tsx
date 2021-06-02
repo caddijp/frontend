@@ -224,6 +224,12 @@ const HerodoViewComponent = (props: HerodoViewProps, ref: Ref<HerodoViewHandler>
     setScale(1);
   }, [width, height, oramaCon]);
 
+  useEffect(() => {
+    if (props.selectedIndex !== null && !props.pins[props.selectedIndex]) {
+      props.onSelectPin?.(null);
+    }
+  }, [props.pins, props.selectedIndex, props.onSelectPin]);
+
   return (
     <Container ref={containerRef}>
       <OramaImageView src={props.src} width={width} height={height} onInit={setOramaCon} />
