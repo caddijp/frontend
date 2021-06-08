@@ -51,12 +51,11 @@ export const Pin: React.FC<{
   onChange: (pin: HerodoViewPin) => void;
   onSelect: () => void;
 }> = (props) => {
-  const [movingPin, setMovingPin] =
-    useState<{
-      target: 'node' | 'origin';
-      basePos: { x: number; y: number };
-      pin: HerodoViewPin;
-    } | null>(null);
+  const [movingPin, setMovingPin] = useState<{
+    target: 'node' | 'origin';
+    basePos: { x: number; y: number };
+    pin: HerodoViewPin;
+  } | null>(null);
   const onMousedown = useCallback(
     (
       e: React.MouseEvent<SVGPathElement | SVGTextElement | SVGPolylineElement>,
