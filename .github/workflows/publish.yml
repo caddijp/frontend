@@ -14,6 +14,8 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }}
       - run: npm test
 
   publish-gpr:
@@ -26,6 +28,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN_FOR_GITHUBPKG }}
       - name: publish
         run: |
           npm run release
