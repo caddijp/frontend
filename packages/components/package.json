@@ -38,7 +38,7 @@
     "@types/react-modal": "3.12.1",
     "@types/styled-components": "5.1.11",
     "babel-loader": "8.2.2",
-    "css-loader": "5.2.7",
+    "css-loader": "6.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest-styled-components": "7.0.5",
     "react-test-renderer": "16.14.0",
