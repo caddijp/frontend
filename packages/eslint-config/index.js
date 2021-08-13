@@ -12,6 +12,8 @@ module.exports = {
     'prefer-const': 2,
     'prefer-destructuring': 1,
     'no-console': 1,
+    '@typescript-eslint/array-type': ['warn', { default: 'array' }], // Array<T> => T[], ReadonlyArray<T> => readonly T[]
+    'react/self-closing-comp': ['warn', { component: true, html: true }], // <div></div> => <div />
   },
   parserOptions: {
     ecmaVersion: 2018,
