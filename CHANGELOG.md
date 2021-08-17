@@ -1,3 +1,16 @@
+## v0.3.0 (2021-08-17)
+
+#### :rocket: Type: Feature
+
+- `eslint-config`
+  - [#318](https://github.com/caddijp/frontend/pull/318) feat: add two rules to the eslint configuration ([@ksakiyama](https://github.com/ksakiyama))
+
+#### Committers: 3
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+- Sota Ohara ([@sottar](https://github.com/sottar))
+- ksakiyama ([@ksakiyama](https://github.com/ksakiyama))
+
 ## v0.2.1 (2021-03-19)
 
 #### :bug: Type: Bug
