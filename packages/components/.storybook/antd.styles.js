@@ -1,4 +1,5 @@
 // antd のコアスタイル
+// organize-imports-ignore
 import 'antd/lib/style/index.css';
 
 // 各コンポーネントのスタイル 使いたいコンポーネントのコメントアウトを外す
