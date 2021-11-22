@@ -40,7 +40,7 @@
     "babel-loader": "8.2.3",
     "css-loader": "6.2.0",
     "identity-obj-proxy": "3.0.0",
-    "jest-styled-components": "7.0.6",
+    "jest-styled-components": "7.0.8",
     "react-test-renderer": "16.14.0",
     "style-loader": "3.2.1"
   },
