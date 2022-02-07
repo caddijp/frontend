@@ -1,10 +1,9 @@
 const path = require('path');
 
-/**
- * Declarative Storybook configuration as of Storybook 5.3
- * https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
- */
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../src/**/*.stories.tsx'],
   // https://github.com/storybookjs/storybook/issues/11146#issuecomment-645341199
   typescript: {
