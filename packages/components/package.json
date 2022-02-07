@@ -1,10 +1,6 @@
 {
   "name": "@caddijp/components",
   "version": "0.3.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "cache": "~/.npm"
-  },
   "description": "CADDi ui components built with React.",
   "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
@@ -21,8 +17,8 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "styled-components": "^5.1.1"
   },
   "dependencies": {
@@ -31,18 +27,17 @@
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
-    "@storybook/addon-storyshots": "6.3.12",
-    "@storybook/react": "6.3.12",
-    "@types/react": "16.14.21",
-    "@types/react-dom": "16.9.14",
+    "@storybook/addon-storyshots": "^6.4.10",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
+    "@storybook/react": "6.4.18",
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.11",
     "@types/react-modal": "3.13.1",
-    "@types/styled-components": "5.1.19",
-    "babel-loader": "8.2.3",
-    "css-loader": "6.2.0",
+    "@types/styled-components": "5.1.22",
     "identity-obj-proxy": "3.0.0",
     "jest-styled-components": "7.0.8",
-    "react-test-renderer": "16.14.0",
-    "style-loader": "3.2.1"
+    "style-loader": "3.3.1"
   },
   "types": "lib/index.d.ts",
   "jest": {
@@ -55,6 +50,7 @@
     "collectCoverage": true,
     "moduleNameMapper": {
       "\\.(scss|css|less|svg)$": "identity-obj-proxy"
-    }
+    },
+    "testEnvironment": "jsdom"
   }
 }
