@@ -1,19 +1,15 @@
 {
   "name": "@caddijp/stylelint-config",
   "version": "0.3.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "cache": "~/.npm"
-  },
   "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
   "main": "index.js",
   "peerDependencies": {
-    "stylelint": ">=11.0.0"
+    "stylelint": ">=14.0.0"
   },
   "dependencies": {
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recess-order": "^2.1.0",
-    "stylelint-config-standard": "^22.0.0"
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^24.0.0"
   }
 }
