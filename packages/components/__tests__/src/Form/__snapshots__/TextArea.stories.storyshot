@@ -11,13 +11,13 @@ exports[`FileProperties Form/TextArea Disabled 1`] = `
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
+  font-feature-settings: 'tnum';
   line-height: 1.5715;
   color: rgba(0,0,0,0.65);
   vertical-align: bottom;
   resize: vertical;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
-  font-feature-settings: 'tnum';
 }
 
 .c0::-webkit-input-placeholder {
@@ -77,13 +77,13 @@ exports[`FileProperties Form/TextArea Readonly 1`] = `
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
+  font-feature-settings: 'tnum';
   line-height: 1.5715;
   color: rgba(0,0,0,0.65);
   vertical-align: bottom;
   resize: vertical;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
-  font-feature-settings: 'tnum';
 }
 
 .c0::-webkit-input-placeholder {
@@ -145,13 +145,13 @@ Array [
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
+  font-feature-settings: 'tnum';
   line-height: 1.5715;
   color: rgba(0,0,0,0.65);
   vertical-align: bottom;
   resize: vertical;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
-  font-feature-settings: 'tnum';
 }
 
 .c0::-webkit-input-placeholder {
@@ -225,13 +225,13 @@ exports[`FileProperties Form/TextArea With Placeholder 1`] = `
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
+  font-feature-settings: 'tnum';
   line-height: 1.5715;
   color: rgba(0,0,0,0.65);
   vertical-align: bottom;
   resize: vertical;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
-  font-feature-settings: 'tnum';
 }
 
 .c0::-webkit-input-placeholder {
@@ -291,13 +291,13 @@ exports[`FileProperties Form/TextArea With Value 1`] = `
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
+  font-feature-settings: 'tnum';
   line-height: 1.5715;
   color: rgba(0,0,0,0.65);
   vertical-align: bottom;
   resize: vertical;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
-  font-feature-settings: 'tnum';
 }
 
 .c0::-webkit-input-placeholder {
