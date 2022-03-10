@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 16.x
       - name: compressed-size-action
-        uses: preactjs/compressed-size-action@2.4.0
+        uses: preactjs/compressed-size-action@2.5.0
         with:
           repo-token: '${{ secrets.github_token }}'
           pattern: './packages/components/esm/**/*.js'
