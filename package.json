@@ -19,7 +19,7 @@
     "lint:style": "stylelint '**/*.ts{,x}'",
     "prepare": "husky install",
     "prepublishOnly": "npm run lint",
-    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish",
+    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish'",
     "start-storybook": "npm run --prefix packages/components start-storybook",
     "test": "lerna run test --parallel"
   },
