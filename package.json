@@ -1,10 +1,6 @@
 {
   "name": "@caddijp/frontend",
   "private": true,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "cache": "~/.npm"
-  },
   "license": "MIT",
   "repository": "ssh://git@github.com/caddijp/frontend.git",
   "author": "CADDi Co.,Ltd",
