@@ -25,7 +25,7 @@ jobs:
       #   with:
       #     registry-url: 'https://registry.npmjs.org'
       #     scope: '@caddijp'
-      # - run: npm ci
+      - run: npm ci
       # - run: npm run release
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
