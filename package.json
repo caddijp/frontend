@@ -1,10 +1,6 @@
 {
   "name": "@caddijp/frontend",
   "private": true,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "cache": "~/.npm"
-  },
   "license": "MIT",
   "repository": "ssh://git@github.com/caddijp/frontend.git",
   "author": "CADDi Co.,Ltd",
@@ -23,7 +19,7 @@
     "lint:style": "stylelint '**/*.ts{,x}'",
     "prepare": "husky install",
     "prepublishOnly": "npm run lint",
-    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish --registry=\"https://npm.pkg.github.com/caddijp\"'",
+    "release": "lerna exec --no-bail -- 'can-npm-publish && npm publish",
     "start-storybook": "npm run --prefix packages/components start-storybook",
     "test": "lerna run test --parallel"
   },

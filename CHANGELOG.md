@@ -1,3 +1,14 @@
+## v0.4.0 (2022-03-10)
+
+#### :rocket: Type: Feature
+
+- `components`, `eslint-config`, `stylelint-config`, `tsconfig`
+  - [#386](https://github.com/caddijp/frontend/pull/386) chore: upgrade dependencies ([@9renpoto](https://github.com/9renpoto))
+
+#### Committers: 1
+
+- Keisuke Kan ([@9renpoto](https://github.com/9renpoto))
+
 ## v0.3.0 (2021-08-17)
 
 #### :rocket: Type: Feature
