@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/tsconfig",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Shared TypeScript config for CADDi projects",
   "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
