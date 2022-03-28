@@ -1,8 +1,12 @@
-import { CloseCircleFilled, ExclamationCircleFilled, InfoCircleFilled } from '@ant-design/icons';
-import React from 'react';
-import styled from 'styled-components';
+import {
+  CloseCircleFilled,
+  ExclamationCircleFilled,
+  InfoCircleFilled,
+} from "@ant-design/icons";
+import React from "react";
+import styled from "styled-components";
 
-type AlertType = 'error' | 'warning' | 'info';
+type AlertType = "error" | "warning" | "info";
 
 interface AlertProps {
   type?: AlertType;
@@ -17,10 +21,18 @@ const Wrapper = styled.div<{ type?: AlertType }>`
   line-height: 14px;
   text-align: left;
   background-color: ${(props) =>
-    props.type === 'info' ? '#e6f7ff' : props.type === 'warning' ? '#fffbe6' : '#fff1f0'};
+    props.type === "info"
+      ? "#e6f7ff"
+      : props.type === "warning"
+      ? "#fffbe6"
+      : "#fff1f0"};
   border: 1px solid
     ${(props) =>
-      props.type === 'info' ? '#69c0ff' : props.type === 'warning' ? '#ffe58f' : '#ffccc7'};
+      props.type === "info"
+        ? "#69c0ff"
+        : props.type === "warning"
+        ? "#ffe58f"
+        : "#ffccc7"};
   border-radius: 2px;
 
   .message {
@@ -31,9 +43,13 @@ const Wrapper = styled.div<{ type?: AlertType }>`
 const Alert: React.FC<AlertProps> = ({ type, message, className }) => {
   return (
     <Wrapper type={type} className={className}>
-      {(type === 'error' || !type) && <CloseCircleFilled style={{ color: '#ff4d4f' }} />}
-      {type === 'warning' && <ExclamationCircleFilled style={{ color: '#faad14' }} />}
-      {type === 'info' && <InfoCircleFilled style={{ color: '#1890ff' }} />}
+      {(type === "error" || !type) && (
+        <CloseCircleFilled style={{ color: "#ff4d4f" }} />
+      )}
+      {type === "warning" && (
+        <ExclamationCircleFilled style={{ color: "#faad14" }} />
+      )}
+      {type === "info" && <InfoCircleFilled style={{ color: "#1890ff" }} />}
       <span className="message">{message}</span>
     </Wrapper>
   );

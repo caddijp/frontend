@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export type TextAreaProps = {
   className?: string;
@@ -23,7 +23,7 @@ const TextAreaComponent = styled.textarea`
   padding: 4px 11px;
   overflow: auto;
   font-size: 14px;
-  font-feature-settings: 'tnum';
+  font-feature-settings: "tnum";
   line-height: 1.5715;
   color: rgba(0, 0, 0, 0.65);
   vertical-align: bottom;

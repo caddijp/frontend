@@ -1,5 +1,7 @@
-import AntdPagination, { PaginationProps as AntdPaginationProps } from 'antd/lib/pagination';
-import React from 'react';
+import AntdPagination, {
+  PaginationProps as AntdPaginationProps,
+} from "antd/lib/pagination";
+import React from "react";
 
 export type PaginationProps = AntdPaginationProps;
 

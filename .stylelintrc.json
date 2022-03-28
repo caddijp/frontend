@@ -1,4 +1,7 @@
 {
-  "extends": ["@caddijp/stylelint-config", "stylelint-config-styled-components"],
+  "extends": [
+    "@caddijp/stylelint-config",
+    "stylelint-config-styled-components"
+  ],
   "customSyntax": "@stylelint/postcss-css-in-js"
 }

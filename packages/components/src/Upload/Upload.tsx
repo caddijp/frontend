@@ -1,6 +1,6 @@
-import { Upload as UploadComponent } from 'antd';
-import React from 'react';
-import { UploadProps } from './interface';
+import { Upload as UploadComponent } from "antd";
+import React from "react";
+import { UploadProps } from "./interface";
 
 const { Dragger } = UploadComponent;
 

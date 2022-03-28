@@ -1,11 +1,11 @@
-import { Meta, Story } from '@storybook/react';
-import React from 'react';
-import { TextArea, TextAreaProps } from '.';
+import { Meta, Story } from "@storybook/react";
+import React from "react";
+import { TextArea, TextAreaProps } from ".";
 
 export default {
-  title: 'Form/TextArea',
+  title: "Form/TextArea",
   component: TextArea,
-  parameters: { actions: { argTypesRegex: '^on.*' } },
+  parameters: { actions: { argTypesRegex: "^on.*" } },
 } as Meta<TextAreaProps>;
 
 const Template: Story<TextAreaProps> = (args) => <TextArea {...args} />;
@@ -13,14 +13,14 @@ const Template: Story<TextAreaProps> = (args) => <TextArea {...args} />;
 export const WithPlaceholder = Template.bind({});
 
 WithPlaceholder.args = {
-  placeholder: 'ページIDを入力',
+  placeholder: "ページIDを入力",
   rows: 4,
 };
 
 export const WithValue = Template.bind({});
 
 WithValue.args = {
-  defaultValue: 'Some value\nOne more line',
+  defaultValue: "Some value\nOne more line",
   rows: 4,
 };
 
@@ -29,16 +29,18 @@ export const WithHandlers: Story<TextAreaProps> = (args) => {
     <>
       <TextArea {...args} />
       <p>
-        OnChange value: <span id="onchange_value"></span>
+        OnChange value: <span id="onchange_value" />
       </p>
       <p>
-        OnBlur value: <span id="onblur_value"></span>
+        OnBlur value: <span id="onblur_value" />
       </p>
     </>
   );
 };
 
-const handler = (spanId: string): React.ChangeEventHandler<HTMLTextAreaElement> => {
+const handler = (
+  spanId: string
+): React.ChangeEventHandler<HTMLTextAreaElement> => {
   return (event) => {
     const value_label = document.getElementById(spanId);
     if (value_label) value_label.innerText = event.target.value;
@@ -46,15 +48,15 @@ const handler = (spanId: string): React.ChangeEventHandler<HTMLTextAreaElement> 
 };
 
 WithHandlers.args = {
-  onChange: handler('onchange_value'),
-  onBlur: handler('onblur_value'),
+  onChange: handler("onchange_value"),
+  onBlur: handler("onblur_value"),
   rows: 4,
 };
 
 export const Readonly = Template.bind({});
 
 Readonly.args = {
-  value: 'Readonly textarea',
+  value: "Readonly textarea",
   readOnly: true,
   rows: 4,
 };

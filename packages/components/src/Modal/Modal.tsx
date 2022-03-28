@@ -1,7 +1,10 @@
-import { CloseOutlined } from '@ant-design/icons';
-import React from 'react';
-import ReactModal, { Props as ReactModalProps, Styles as ReactModalStyles } from 'react-modal';
-import styled from 'styled-components';
+import { CloseOutlined } from "@ant-design/icons";
+import React from "react";
+import ReactModal, {
+  Props as ReactModalProps,
+  Styles as ReactModalStyles,
+} from "react-modal";
+import styled from "styled-components";
 
 export type ModalProps = ReactModalProps & {
   title?: string;
@@ -11,7 +14,7 @@ export type ModalProps = ReactModalProps & {
 const customStyles: ReactModalStyles = {
   /* stylelint-disable selector-type-no-unknown */
   overlay: {
-    background: 'rgba(72, 82, 109, 0.2)',
+    background: "rgba(72, 82, 109, 0.2)",
   },
   /* stylelint-enable selector-type-no-unknown */
 };

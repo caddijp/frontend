@@ -1,11 +1,11 @@
-import { Story } from '@storybook/react';
-import React from 'react';
-import styled from 'styled-components';
-import { Modal, ModalProps } from '.';
-import { Button } from '../Button';
+import { Story } from "@storybook/react";
+import React from "react";
+import styled from "styled-components";
+import { Modal, ModalProps } from ".";
+import { Button } from "../Button";
 
 export default {
-  title: 'Modal DontTest',
+  title: "Modal DontTest",
   component: Modal,
 };
 
@@ -55,7 +55,7 @@ const ExportModalBodyChildren = () => {
   return (
     <ExportModalContent>
       <ExportFilePageIdList>
-        <li style={{ fontWeight: 'bold' }}>選択中の図面5件</li>
+        <li style={{ fontWeight: "bold" }}>選択中の図面5件</li>
         <li>aaaa-aaaa-aaaa</li>
         <li>aaaa-aaaa-aaaa</li>
         <li>aaaa-aaaa-aaaa</li>
@@ -70,8 +70,10 @@ const ExportModalFooterChildern = () => {
   return (
     <ExportModalFooter>
       <ExportModalInputArea>
-        <ExportModalInput placeholder="ファイル名を入力※必須"></ExportModalInput>
-        <ExportModalInputFileExtentionArea>.pdf</ExportModalInputFileExtentionArea>
+        <ExportModalInput placeholder="ファイル名を入力※必須" />
+        <ExportModalInputFileExtentionArea>
+          .pdf
+        </ExportModalInputFileExtentionArea>
       </ExportModalInputArea>
       <ExportModalButton type="primary">エクスポートする</ExportModalButton>
     </ExportModalFooter>
@@ -87,7 +89,7 @@ const ExportTemplate: Story<ModalProps> = (args: ModalProps) => (
 export const ExportModal = ExportTemplate.bind({});
 
 ExportModal.args = {
-  title: 'エクスポート',
+  title: "エクスポート",
   footer: ExportModalFooterChildern(),
   isOpen: true,
 };

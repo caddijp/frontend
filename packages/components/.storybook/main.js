@@ -1,10 +1,10 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   core: {
-    builder: 'webpack5',
+    builder: "webpack5",
   },
-  stories: ['../src/**/*.stories.tsx'],
+  stories: ["../src/**/*.stories.tsx"],
   // https://github.com/storybookjs/storybook/issues/11146#issuecomment-645341199
   typescript: {
     reactDocgenTypescriptOptions: {
@@ -18,8 +18,8 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-      include: path.resolve(__dirname, '../'),
+      use: ["style-loader", "css-loader"],
+      include: path.resolve(__dirname, "../"),
     });
     return config;
   },

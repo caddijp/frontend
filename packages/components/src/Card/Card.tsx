@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 type CardProps = {
   padding?: string;
@@ -8,8 +8,8 @@ type CardProps = {
 };
 
 const Wrapper = styled.div<CardProps>`
-  width: ${(props) => props.width ?? '550px'};
-  padding: ${(props) => props.padding ?? '30px'};
+  width: ${(props) => props.width ?? "550px"};
+  padding: ${(props) => props.padding ?? "30px"};
   margin: 0 auto;
   background: #fff;
 `;

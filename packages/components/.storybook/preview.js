@@ -1,1 +1,1 @@
-import './antd.styles.js';
+import "./antd.styles.js";

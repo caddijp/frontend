@@ -11,10 +11,9 @@ React components made for creating applications
 ## Usage
 
 ```typescript
-import { Button } from '@caddijp/components';
+import { Button } from "@caddijp/components";
 
-export const Hello = ()=> (<Button>Hello</Button>);
-
+export const Hello = () => <Button>Hello</Button>;
 ```
 
 ## License

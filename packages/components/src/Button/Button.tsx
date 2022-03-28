@@ -1,10 +1,10 @@
-import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
-import React, { ComponentProps, FC } from 'react';
-import styled from 'styled-components';
+import LoadingOutlined from "@ant-design/icons/LoadingOutlined";
+import React, { ComponentProps, FC } from "react";
+import styled from "styled-components";
 
-type ButtonType = 'primary' | 'danger' | 'default' | 'text';
+type ButtonType = "primary" | "danger" | "default" | "text";
 
-interface BaseProps extends Omit<ComponentProps<typeof BaseWrapper>, 'type'> {
+interface BaseProps extends Omit<ComponentProps<typeof BaseWrapper>, "type"> {
   type?: ButtonType;
   isLoading?: boolean;
 }
@@ -21,7 +21,7 @@ const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   background: #fff;
   border: 0;
   border-radius: 2px;
-  opacity: ${(props) => (props.disabled || props.isLoading ? '.5' : '1')};
+  opacity: ${(props) => (props.disabled || props.isLoading ? ".5" : "1")};
   transition: opacity 0.3s;
   &:hover {
     opacity: 0.5;
@@ -31,7 +31,11 @@ const BaseWrapper = styled.button<{ disabled?: boolean; isLoading?: boolean }>`
   }
 `;
 
-const BaseButton: FC<Omit<ButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+const BaseButton: FC<Omit<ButtonProps, "type">> = ({
+  onClick,
+  children,
+  ...props
+}) => (
   <BaseWrapper onClick={props.disabled ? void 0 : onClick} {...props}>
     {children}
     {props.isLoading && <LoadingOutlined />}
@@ -42,27 +46,36 @@ const PrimaryButton = styled(BaseButton)<{
   filled?: boolean;
   bordered?: boolean;
 }>`
-  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#1890ff')};
-  background: ${({ filled, bordered }) => (filled || !bordered ? '#1890ff' : '#fff')};
-  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#1890ff' : '#fff')};
+  color: ${({ filled, bordered }) =>
+    filled || !bordered ? "#fff" : "#1890ff"};
+  background: ${({ filled, bordered }) =>
+    filled || !bordered ? "#1890ff" : "#fff"};
+  border: 1px solid
+    ${({ filled, bordered }) => (filled || !bordered ? "#1890ff" : "#fff")};
 `;
 
 const DangerButton = styled(BaseButton)<{
   filled?: boolean;
   bordered?: boolean;
 }>`
-  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#eb5757')};
-  background: ${({ filled, bordered }) => (filled || !bordered ? '#eb5757' : '#fff')};
-  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#eb5757' : '#fff')};
+  color: ${({ filled, bordered }) =>
+    filled || !bordered ? "#fff" : "#eb5757"};
+  background: ${({ filled, bordered }) =>
+    filled || !bordered ? "#eb5757" : "#fff"};
+  border: 1px solid
+    ${({ filled, bordered }) => (filled || !bordered ? "#eb5757" : "#fff")};
 `;
 
 const DefaultButton = styled(BaseButton)<{
   filled?: boolean;
   bordered?: boolean;
 }>`
-  color: ${({ filled, bordered }) => (filled || !bordered ? '#fff' : '#595959')};
-  background: ${({ filled, bordered }) => (filled || !bordered ? '#595959' : '#fff')};
-  border: 1px solid ${({ filled, bordered }) => (filled || !bordered ? '#595959' : '#d9d9d9')};
+  color: ${({ filled, bordered }) =>
+    filled || !bordered ? "#fff" : "#595959"};
+  background: ${({ filled, bordered }) =>
+    filled || !bordered ? "#595959" : "#fff"};
+  border: 1px solid
+    ${({ filled, bordered }) => (filled || !bordered ? "#595959" : "#d9d9d9")};
 `;
 
 interface TextButtonProps extends BaseProps {
@@ -78,14 +91,14 @@ const StyledTextButton = styled.button<{
 }>`
   display: flex;
   align-items: center;
-  font-size: ${(props) => props.fontSize ?? '11px'};
+  font-size: ${(props) => props.fontSize ?? "11px"};
   font-weight: bold;
   color: #3582e5;
-  text-decoration: ${(props) => (props.needsBorderLine ? 'underline' : 'none')};
+  text-decoration: ${(props) => (props.needsBorderLine ? "underline" : "none")};
   cursor: pointer;
   background: none;
   border: none;
-  opacity: ${(props) => (props.disabled ? '.5' : '1')};
+  opacity: ${(props) => (props.disabled ? ".5" : "1")};
   transition: opacity 0.3s;
   &:hover {
     opacity: 0.5;
@@ -95,7 +108,11 @@ const StyledTextButton = styled.button<{
   }
 `;
 
-const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({ onClick, children, ...props }) => (
+const TextButton: FC<Omit<TextButtonProps, "type">> = ({
+  onClick,
+  children,
+  ...props
+}) => (
   <StyledTextButton onClick={props.disabled ? void 0 : onClick} {...props}>
     {children}
   </StyledTextButton>
@@ -103,13 +120,13 @@ const TextButton: FC<Omit<TextButtonProps, 'type'>> = ({ onClick, children, ...p
 
 const Button: FC<ButtonProps | TextButtonProps> = ({ type, ...props }) => {
   switch (type) {
-    case 'text':
+    case "text":
       return <TextButton {...props} />;
-    case 'primary':
+    case "primary":
       return <PrimaryButton {...props} />;
-    case 'danger':
+    case "danger":
       return <DangerButton {...props} />;
-    case 'default':
+    case "default":
     default:
       return <DefaultButton {...props} />;
   }

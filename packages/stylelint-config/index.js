@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['stylelint-config-prettier', 'stylelint-config-recess-order'],
+  extends: ["stylelint-config-prettier", "stylelint-config-recess-order"],
   rules: {
-    'value-keyword-case': null,
+    "value-keyword-case": null,
   },
 };

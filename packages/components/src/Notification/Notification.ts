@@ -1,7 +1,7 @@
-import antdNotification from 'antd/lib/notification';
-import React from 'react';
+import antdNotification from "antd/lib/notification";
+import React from "react";
 
-type NotificationType = 'success' | 'info' | 'warning' | 'error' | 'default';
+type NotificationType = "success" | "info" | "warning" | "error" | "default";
 type NotificationProps = {
   type: NotificationType;
   message: React.ReactNode;
@@ -17,19 +17,19 @@ const notification = {
       duration: props.duration,
     };
     switch (props.type) {
-      case 'success':
+      case "success":
         antdNotification.success(attr);
         return;
-      case 'info':
+      case "info":
         antdNotification.info(attr);
         return;
-      case 'warning':
+      case "warning":
         antdNotification.warning(attr);
         return;
-      case 'error':
+      case "error":
         antdNotification.error(attr);
         return;
-      case 'default':
+      case "default":
       default:
         antdNotification.open(attr);
     }

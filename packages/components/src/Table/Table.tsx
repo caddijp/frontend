@@ -1,8 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 type ColumnsType = { key: string; title: string }[];
-type DataType = { [index: string]: string | number | JSX.Element | JSX.Element[] }[];
+type DataType = {
+  [index: string]: string | number | JSX.Element | JSX.Element[];
+}[];
 
 export type TableProps = {
   columns: ColumnsType;

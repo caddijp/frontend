@@ -1,6 +1,6 @@
 // antd のコアスタイル
 // organize-imports-ignore
-import 'antd/lib/style/index.css';
+import "antd/lib/style/index.css";
 
 // 各コンポーネントのスタイル 使いたいコンポーネントのコメントアウトを外す
 
@@ -39,9 +39,9 @@ import 'antd/lib/style/index.css';
 // import 'antd/lib/menu/style/index.css';
 // import 'antd/lib/message/style/index.css';
 // import 'antd/lib/modal/style/index.css';
-import 'antd/lib/notification/style/index.css';
+import "antd/lib/notification/style/index.css";
 // import 'antd/lib/page-header/style/index.css';
-import 'antd/lib/pagination/style/index.css';
+import "antd/lib/pagination/style/index.css";
 // import 'antd/lib/popover/style/index.css';
 // import 'antd/lib/progress/style/index.css';
 // import 'antd/lib/radio/style/index.css';
@@ -65,4 +65,4 @@ import 'antd/lib/pagination/style/index.css';
 // import 'antd/lib/tree/style/index.css';
 // import 'antd/lib/tree-select/style/index.css';
 // import 'antd/lib/typography/style/index.css';
-import 'antd/lib/upload/style/index.css';
+import "antd/lib/upload/style/index.css";

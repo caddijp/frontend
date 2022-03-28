@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface CheckboxProps {
   checked: boolean;
@@ -16,7 +16,8 @@ const Wrapper = styled.div<{ disabled?: boolean }>`
   label {
     display: flex;
     align-items: center;
-    color: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0.65)')};
+    color: ${(props) =>
+      props.disabled ? "rgba(0, 0, 0, 0.25)" : "rgba(0, 0, 0, 0.65)"};
   }
 `;
 
@@ -42,7 +43,7 @@ const StyledCheckbox = styled.input`
       display: table;
       width: 5.71428571px;
       height: 9.14285714px;
-      content: ' ';
+      content: " ";
       border: 2px solid #fff;
       border-top: 0;
       border-left: 0;

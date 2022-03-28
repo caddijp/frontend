@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface InputProps {
   width?: string;
@@ -43,14 +43,14 @@ const StyledInput = styled.input<{
   hasAddonBefore: boolean;
   hasAddonAfter: boolean;
 }>`
-  width: ${(props) => props.width ?? '100%'};
+  width: ${(props) => props.width ?? "100%"};
   height: 32px;
   background: #fff;
   border: 1px solid #d9d9d9;
-  border-top-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
-  border-top-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
-  border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : '2px')};
-  border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : '2px')};
+  border-top-left-radius: ${(props) => (props.hasAddonBefore ? 0 : "2px")};
+  border-top-right-radius: ${(props) => (props.hasAddonAfter ? 0 : "2px")};
+  border-bottom-right-radius: ${(props) => (props.hasAddonAfter ? 0 : "2px")};
+  border-bottom-left-radius: ${(props) => (props.hasAddonBefore ? 0 : "2px")};
   &:disabled {
     cursor: not-allowed;
     background: #fafafa;
