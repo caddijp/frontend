@@ -10,8 +10,8 @@ export default {
   parameters: { actions: { argTypesRegex: '^on.*' } },
 } as Meta<UploadProps>;
 
-const Template: Story<UploadProps> = (args) => (
-  <Upload {...args}>
+const Template: Story<UploadProps> = ({ height }) => (
+  <Upload height={height}>
     <InboxOutlined />
     インポートするファイルをここにドラッグ&amp;ドロップ
   </Upload>
