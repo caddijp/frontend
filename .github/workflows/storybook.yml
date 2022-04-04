@@ -15,8 +15,8 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: skip
         run: |
-          DIFF_LINES=$(git diff origin/main...HEAD --name-only | grep "stories.tsx" | wc -l);
-          if [$DIFF_LINES -eq 0]; then
+          DIFF_LINES=$(git diff origin/main...HEAD --name-only | grep "stories.tsx" | wc -l)
+          if [ $DIFF_LINES -eq 0 ]; then
             echo "Skip building storybook."
             exit 0
           fi
