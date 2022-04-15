@@ -27,10 +27,10 @@
     "react-modal": "^3.11.2"
   },
   "devDependencies": {
-    "@storybook/addon-storyshots": "6.4.21",
-    "@storybook/builder-webpack5": "6.4.21",
-    "@storybook/manager-webpack5": "6.4.21",
-    "@storybook/react": "6.4.21",
+    "@storybook/addon-storyshots": "6.4.22",
+    "@storybook/builder-webpack5": "6.4.22",
+    "@storybook/manager-webpack5": "6.4.22",
+    "@storybook/react": "6.4.22",
     "@types/react": "17.0.44",
     "@types/react-dom": "18.0.0",
     "@types/react-modal": "3.13.1",
