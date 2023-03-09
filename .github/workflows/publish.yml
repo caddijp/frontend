@@ -16,12 +16,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@lintdog'
       - run: npm ci
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           registry-url: 'https://npm.pkg.github.com'
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
