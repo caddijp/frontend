@@ -6,7 +6,6 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:isaacscript/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
