@@ -4,7 +4,7 @@
 
 ## Install
 
-    npm install -D @caddijp/eslint-config eslint typescript
+    npm install @caddijp/eslint-config -D
 
 ## Usage
 

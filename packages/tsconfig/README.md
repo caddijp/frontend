@@ -6,7 +6,7 @@ Shared TypeScript config for CADDi projects
 
 ## Install
 
-    npm install @caddijp/tsconfig
+    npm install @caddijp/tsconfig -D
 
 ## Usage
 

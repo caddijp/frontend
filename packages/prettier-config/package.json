@@ -1,6 +1,6 @@
 {
   "name": "@caddijp/prettier-config",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "repository": "git@github.com:Youngdi/lints.git",
   "main": "index.js",

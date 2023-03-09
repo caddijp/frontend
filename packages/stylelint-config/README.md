@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install -D @caddijp/stylelint-config stylelint
+npm install @caddijp/stylelint-config -D
 ```
 
 ## Usage

@@ -4,13 +4,13 @@
 
 ## Install
 
-    npm install -D @caddijp/prettier-config prettier typescript
+    npm install @caddijp/prettier-config -D
 
 ## Usage
 
 ```js
 module.exports = {
-  ...require('./packages/prettier-config/index'),
+  ...require('@caddijp/prettier-config'),
 };
 ```
 
