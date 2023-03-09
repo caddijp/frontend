@@ -1,29 +1,45 @@
 module.exports = {
   extends: [
-    'prettier',
     'eslint:recommended',
-    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:isaacscript/recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['html'],
   rules: {
-    'no-var': 2,
-    'prefer-const': 2,
-    'prefer-destructuring': 1,
-    'no-console': 1,
-    '@typescript-eslint/array-type': ['warn', { default: 'array' }], // Array<T> => T[], ReadonlyArray<T> => readonly T[]
-    'react/self-closing-comp': ['warn', { component: true, html: true }], // <div></div> => <div />
+    'react/prop-types': 0,
+    '@typescript-eslint/no-unused-vars': [
+      1,
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
+    camelcase: 'error',
+    eqeqeq: ['error', 'always'],
   },
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
   globals: {
-    process: 'readonly',
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
   env: {
     es6: true,
-    commonjs: true,
+    node: true,
+    jest: true,
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
