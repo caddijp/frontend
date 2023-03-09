@@ -1,14 +1,14 @@
 {
   "name": "@caddijp/stylelint-config",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "license": "MIT",
   "repository": "git@github.com:caddijp/frontend.git",
   "main": "index.js",
-  "peerDependencies": {
-    "stylelint": ">=14.0.0"
-  },
   "dependencies": {
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recess-order": "^3.0.0"
+    "@stylelint/postcss-css-in-js": "0.38.0",
+    "stylelint": "15.2.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-recess-order": "4.0.0",
+    "stylelint-config-styled-components": "0.1.1"
   }
 }
