@@ -1,3 +1,14 @@
+## v0.5.0 (2023-03-09)
+
+#### :rocket: Type: Feature
+
+- `prettier-config`, `eslint-config`, `stylelint-config`, `tsconfig`
+  - Remove `packages/components` and add `prettier-config`: feat: upgrade ESLint rules and all the dependences 
+
+#### Committers: 1
+
+- ([@Youngdi](https://github.com/youngdi))
+ 
 ## v0.4.0 (2022-03-10)
 
 #### :rocket: Type: Feature
