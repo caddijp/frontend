@@ -1,17 +1,3 @@
 {
-  "extends": ["@caddijp/eslint-config"],
-  "plugins": ["react", "react-hooks"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "env": {
-    "browser": true
-  }
+  "extends": ["packages/eslint-config/index.js"]
 }

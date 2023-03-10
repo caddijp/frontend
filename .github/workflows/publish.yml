@@ -1,4 +1,4 @@
-name: publish Node.js Package
+name: Publish packages
 
 on:
   push:
@@ -6,32 +6,22 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  publish-packages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: npm ci
-      - run: npm test
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
           registry-url: 'https://registry.npmjs.org'
-          scope: '@caddijp'
+          scope: '@lintdog'
       - run: npm ci
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           registry-url: 'https://npm.pkg.github.com'
-      - run: lerna exec --no-bail -- 'npm publish'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

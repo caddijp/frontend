@@ -1,0 +1,15 @@
+{
+  "name": "@caddijp/prettier-config",
+  "version": "0.5.2",
+  "license": "MIT",
+  "repository": "git@github.com:Youngdi/lints.git",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . -c index.js"
+  },
+  "dependencies": {
+    "prettier": "2.8.4",
+    "prettier-plugin-organize-imports": "3.2.2",
+    "prettier-plugin-package": "1.3.0"
+  }
+}
