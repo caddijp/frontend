@@ -37,7 +37,7 @@
     "@types/styled-components": "5.1.25",
     "identity-obj-proxy": "3.0.0",
     "jest-styled-components": "7.0.8",
-    "style-loader": "3.3.1"
+    "style-loader": "3.3.3"
   },
   "types": "lib/index.d.ts",
   "jest": {
