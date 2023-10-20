@@ -11,5 +11,6 @@
   "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.md"],
   "packages": ["packages/*"],
   "npmClient": "npm",
+  "useWorkspaces": true,
   "version": "0.5.3"
 }
