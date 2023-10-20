@@ -11,17 +11,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://npm.pkg.github.com'
           scope: '@caddijp'
       - run: npm ci
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          token: ${{ secrets.NPM_TOKEN }}
-      - uses: actions/setup-node@v3
-        with:
-          registry-url: 'https://npm.pkg.github.com'
       - run: npm login --registry=https://npm.pkg.github.com/
       - run: npm login && npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
