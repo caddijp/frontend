@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: npm login --scope=@caddijp --registry=https://registry.mycorp.com
+      - run: npm login --scope=@caddijp --registry=https://registry.npmjs.org
       - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
