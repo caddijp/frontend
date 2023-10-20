@@ -1,8 +1,8 @@
 {
   "name": "@caddijp/prettier-config",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
-  "repository": "git@github.com:Youngdi/lints.git",
+  "repository": "git@github.com:caddijp/frontend.git",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . -c index.js"
