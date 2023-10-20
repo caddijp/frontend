@@ -1,9 +1,7 @@
 name: Publish packages
 
 on:
-  push:
-    tags:
-      - 'v*'
+  pull_request:
 
 jobs:
   publish-packages:
@@ -16,12 +14,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@caddijp'
       - run: npm ci
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           registry-url: 'https://npm.pkg.github.com'
-      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
