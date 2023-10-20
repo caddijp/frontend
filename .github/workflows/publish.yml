@@ -14,7 +14,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@caddijp'
       - run: npm ci
-      - run: npm login --registry=https://npm.pkg.github.com/
-      - run: npm login && npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
+      - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
