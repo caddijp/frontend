@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@lintdog'
+          scope: '@caddijp'
+      - run: npm login
       - run: npx lerna exec --no-bail -- 'can-npm-publish && npm publish --access public'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
